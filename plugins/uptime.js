@@ -42,7 +42,7 @@ const alive = async (m, Matrix) => {
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "> ⚡𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀"
+            text: "> ⚡RAHEEM-XMD-3🪀"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "",
@@ -58,8 +58,8 @@ const alive = async (m, Matrix) => {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '529633982655',
-                  newsletterName: "𝐇𝐀𝐈𝐊𝐎 𝐌𝐃𝐗",
+                  newsletterJid: 255763111390',
+                  newsletterName: "RAHEEM-XMD",
                   serverMessageId: 143
                 }
               }
