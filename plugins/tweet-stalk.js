@@ -38,7 +38,7 @@ cmd({
       + `┃📅 *Joined:* ${user.created}\n`
       + `┃🔗 *Profile:* [Click Here](${user.url})\n`
       + `╰━━━⪼\n\n`
-      + `> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+      + `> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-XMD-3*`;
 
     await conn.sendMessage(from, {
       image: { url: user.avatar },
