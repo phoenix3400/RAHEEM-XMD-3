@@ -120,7 +120,7 @@ ${config.DESCRIPTION}`;
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363398101781980@newsletter',
-                    newsletterName: config.OWNER_NAME || '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                    newsletterName: config.OWNER_NAME || 'RAHEEM-XMD-3',
                     serverMessageId: 143
                 }
             }
