@@ -27,7 +27,7 @@ cmd({
     }
 
     // Fetch latest version data from GitHub
-    const rawVersionUrl = 'https://raw.githubusercontent.com/PROFESSEURMDX/HAIKO-MDX-V2/main/data/version.json';
+    const rawVersionUrl = 'https://raw.githubusercontent.com/Raheem-cm/RAHEEM-XMD-3/main/data/version.json';
     let latestVersion = 'Unknown';
     let latestChangelog = 'No changelog available.';
     try {
@@ -53,12 +53,12 @@ cmd({
     const lastUpdate = fs.statSync(localVersionPath).mtime.toLocaleString();
 
     // GitHub stats
-    const githubRepo = 'https://github.com/PROFESSEURMDX/HAIKO-MDX-V2';
+    const githubRepo = 'https://github.com/Raheem-cm/RAHEEM-XMD-3';
 
     // Check update status
-    let updateMessage = `✅ Your HAIKO-MDX-V2 bot is up-to-date!`;
+    let updateMessage = `✅ Your RAHEEM-XMD-3 bot is up-to-date!`;
     if (localVersion !== latestVersion) {
-      updateMessage = `🚀 Your HAIKO-MDX-V2 bot is outdated!
+      updateMessage = `🚀 Your RAHEEM-XMD-3 bot is outdated!
 🔹 *Current Version:* ${localVersion}
 🔹 *Latest Version:* ${latestVersion}
 
@@ -66,14 +66,14 @@ Use *.update* to update.`;
     }
 
     const statusMessage = `🌟 *Good ${new Date().getHours() < 12 ? 'Morning' : 'Night'}, ${pushname}!* 🌟\n\n` +
-      `📌 *Bot Name:* HAIKO-MDX-V2\n🔖 *Current Version:* ${localVersion}\n📢 *Latest Version:* ${latestVersion}\n📂 *Total Plugins:* ${pluginCount}\n🔢 *Total Commands:* ${totalCommands}\n\n` +
+      `📌 *Bot Name:* RAHEEM-XMD-3\n🔖 *Current Version:* ${localVersion}\n📢 *Latest Version:* ${latestVersion}\n📂 *Total Plugins:* ${pluginCount}\n🔢 *Total Commands:* ${totalCommands}\n\n` +
       `💾 *System Info:*\n⏳ *Uptime:* ${uptime}\n📟 *RAM Usage:* ${ramUsage}MB / ${totalRam}MB\n⚙️ *Host Name:* ${hostName}\n📅 *Last Update:* ${lastUpdate}\n\n` +
       `📝 *Changelog:*\n${latestChangelog}\n\n` +
-      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [PROFESSEURMDX](https://github.com/PROFESSEURMDX)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
+      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [Raheem-cm](https://github.com/Raheem-cm)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
 
     // Send the status message with an image
     await conn.sendMessage(from, {
-      image: { url: 'https://files.catbox.moe/cad2f0.jpg' },
+      image: { url: 'https://files.catbox.moe/a97zm1.jpg' },
       caption: statusMessage,
       contextInfo: {
         mentionedJid: [m.sender],
@@ -81,7 +81,7 @@ Use *.update* to update.`;
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: '120363372853772240@newsletter',
-          newsletterName: '𝐇𝐙𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+          newsletterName: 'RAHEEM-XMD-3',
           serverMessageId: 143
         }
       }
