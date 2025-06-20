@@ -3,7 +3,7 @@ const { sleep } = require("../lib/functions");
 
 cmd({  
     pattern: "restart",  
-    desc: "Restart HAIKO-MDX-V2",  
+    desc: "Restart RAHEEM-XMD-3",  
     category: "owner",  
     filename: __filename  
 },  
@@ -14,7 +14,7 @@ async (conn, mek, m, { reply, isCreator }) => {
         }  
 
         const { exec } = require("child_process");  
-        reply("HAIKO-MDX-V2 RESTARTING...");  
+        reply("RAHEEM-XMD-3 RESTARTING...");  
         await sleep(1500);  
         exec("pm2 restart all");  
     } catch (e) {  
