@@ -42,7 +42,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         if (!isOwner) return reply("❌ Owner only command");
 
-        if (!q) return reply(`Usage:\n${command} https://whatsapp.com/channel/1234567890 hello`);
+        if (!q) return reply(`Usage:\n${command} https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r hello`);
 
         const [link, ...textParts] = q.split(' ');
 
@@ -78,13 +78,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         await conn.newsletterReactMessage(channelMeta.id, messageId, emoji);
 
-        return reply(`╭━〔 *HAIKO-MDX-V2* 〕━┈⊷
+        return reply(`╭━〔 *RAHEEM-XMD-3* 〕━┈⊷
 ┃▸ *Success!* Reaction sent
 ┃▸ *Channel:* ${channelMeta.name}
 ┃▸ *Reaction:* ${emoji}
 ╰────────────────┈⊷
 
-> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*`);
+> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`);
 
     } catch (e) {
 
@@ -96,4 +96,4 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 });
 
-// *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ* 
+// *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEE CM* 
