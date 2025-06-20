@@ -25,14 +25,14 @@ cmd({
   const sendScreenshot = async (imageBuffer) => {
     return await client.sendMessage(from, {
       image: imageBuffer,
-      caption: `*📸 Screenshot Tool*\n\n🌐 *URL:* ${q}\n\n> _*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*_`,
+      caption: `*📸 Screenshot Tool*\n\n🌐 *URL:* ${q}\n\n> _*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*_`,
       contextInfo: {
         mentionedJid: [msg.sender],
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: "120363398101781980@newsletter",
-          newsletterName: "𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐",
+          newsletterName: "RAHEEM-XMD-3",
           serverMessageId: 143
         }
       }
