@@ -22,7 +22,7 @@ cmd(
     async (conn, mek, m, { quoted, args, q, reply, from }) => {
         if (!mek.quoted) return reply(`*REPLY TO ANY STICKER.*`);
         if (!q) return reply(`𝗣𝗟𝗘𝗔𝗦𝗘 𝗣𝗥𝗢𝗩𝗜𝗗𝗘 𝗔 𝗣𝗔𝗖𝗞 𝗡𝗔𝗠𝗘
-> *EXEMPLE .TAKE XTREME*`);
+> *EXEMPLE .TAKE RAHEEM*`);
 
         let mime = mek.quoted.mtype;
         let pack = q;
