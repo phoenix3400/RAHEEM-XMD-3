@@ -1,8 +1,8 @@
 {
-  "name": "HAIKO-MDX-V2",
-  "description": "Javascript WhatsApp bot made ʙʏ ᴘʀᴏғᴇssᴇᴜʀ ᴛᴇᴄʜ",
-  "logo": "https://files.catbox.moe/sy6isf.jpg",
-  "keywords": ["HAIKO-MDX-V2"],
+  "name": "RAHEEM-XMD-3",
+  "description": "Javascript WhatsApp bot made ʙʏ RAHEEM-CM",
+  "logo": "https://files.catbox.moe/a97zm1.jpg",
+  "keywords": ["RAHEEM-XMD-3"],
   "success_url": "/",
 
     "stack": "container",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "HAIKO-MDX-V2"
+      "value": "RAHEEM-XMD-3"
     }, 
       
     "PREFIX": {
@@ -79,27 +79,27 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY HAIKO-MDX-V2 🐺*"
+      "value": "*SEEN YOUR STATUS BY RAHEEM-XMD-3 🐺*"
    
      }, 
     
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "ᴘʀᴏғᴇssᴇᴜʀ ᴛᴇᴄʜ"
+      "value": "RAHEEM-CM"
 }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "53xxxxxxxx"
+      "value": "255XXXXXX"
 
     }, 
 
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "HAIKO-MDX-V2"
+      "value": "RAHEEM-XMD-3"
 
       }, 
 
@@ -132,13 +132,13 @@
     "MENU_IMAGE_URL": {
       "description": "add url for mention reply and menu if want.",
       "required": false,
-      "value": "https://files.catbox.moe/sy6isf.jpg"
+      "value": "https://files.catbox.moe/a97zm1.jpg"
     },
     
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*"
+      "value": "> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-XMD-3*"
     },
 
       "DELETE_LINKS": {
