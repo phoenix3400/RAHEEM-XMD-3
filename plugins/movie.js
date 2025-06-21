@@ -54,7 +54,7 @@ async (conn, mek, m, { from, reply, sender, args }) => {
             from,
             {
                 image: { 
-                    url: movie.poster && movie.poster !== 'N/A' ? movie.poster : 'https://files.catbox.moe/cad2f0.jpg'
+                    url: movie.poster && movie.poster !== 'N/A' ? movie.poster : 'https://files.catbox.moe/a97zm1.jpg'
                 },
                 caption: dec,
                 contextInfo: {
@@ -63,7 +63,7 @@ async (conn, mek, m, { from, reply, sender, args }) => {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterName: 'RAHEEM-XMD-3',
                         serverMessageId: 143
                     }
                 }
