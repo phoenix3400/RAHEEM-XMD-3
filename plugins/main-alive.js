@@ -25,10 +25,10 @@ async (conn, mek, m, { from, sender, reply }) => {
 │🖥️ *Host:* ${os.hostname()}
 │⌛ *Uptime:* ${runtime(process.uptime())}
 ╰────────────────────◉
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*}`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*}`;
 
         await conn.sendMessage(from, {
-            image: { url: `https://files.catbox.moe/vjfkj7.jpg` },
+            image: { url: `https://files.catbox.moe/a97zm1.jpg` },
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
@@ -36,7 +36,7 @@ async (conn, mek, m, { from, sender, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363398101781980@newsletter',
-                    newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                    newsletterName: 'RAHEEM-XMD-3🪀',
                     serverMessageId: 143
                 }
             }
