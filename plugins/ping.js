@@ -33,10 +33,10 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         const responseTime = (end - start) / 1000;
 
         const text = `╭━━━━⪻•𝐏𝐈𝐍𝐆 𝐓𝐄𝐒𝐓•⪼━━━━╮
-┃📡𝐁𝐎𝐓: *𝐇𝐀𝐈𝐊𝐎 𝐌𝐃𝐗 𝐕𝟐*
+┃📡𝐁𝐎𝐓: *RAHEEM-XMD-3*
 ┃🌟𝐏𝐈𝐍𝐆: *${responseTime.toFixed(2)}MS ${reactionEmoji}*
 ╰━━━━━━⦉𝐗𝐓𝐑𝐄𝐌𝐄⦊━━━━━━╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx* 💙`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM* 💙`;
 
         await conn.sendMessage(from, {
             text,
@@ -46,7 +46,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363398101781980@newsletter',
-                    newsletterName: "𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐",
+                    newsletterName: "RAHEEM-XMD-3",
                     serverMessageId: 143
                 }
             }
@@ -74,10 +74,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const endTime = Date.now()
         const ping = endTime - startTime
         await conn.sendMessage(from, { text: `╭━━〔 *🛸 SPEED2 TEST* 〕━━╮
-┃ 🤖 *BOT* : *HAIKO MDX V2*
+┃ 🤖 *BOT* : *RAHEEM-XMD-3*
 ┃ ⏳ *PING* : *${ping}MS*
 ╰━━━━━━━━━━━━━━━━━━━━╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx* 💙` }, { quoted: message })
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM* 💙` }, { quoted: message })
     } catch (e) {
         console.log(e)
         reply(`${e}`)
