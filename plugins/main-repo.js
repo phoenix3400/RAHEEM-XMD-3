@@ -11,7 +11,7 @@ cmd({
     filename: __filename,
 },
 async (conn, mek, m, { from, reply }) => {
-    const githubRepoURL = 'https://github.com/PROFESSEURMDX/HAIKO-MDX-V2';
+    const githubRepoURL = 'https://github.com/Raheem-cm/RAHEEM-XMD-3';
 
     try {
         const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
@@ -165,14 +165,14 @@ ${repoData.description || 'No description'}
 DESCRIPTION:
 ${repoData.description || 'NO DESCRIPTION PROVIDED'}
 
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM*`;
 
         const styles = [style1, style2, style3, style4, style5, style6, style7, style8, style9, style10];
         const selectedStyle = styles[Math.floor(Math.random() * styles.length)];
 
         // Send image with repo info
         await conn.sendMessage(from, {
-            image: { url: `https://files.catbox.moe/v4pdfd.jpg` },
+            image: { url: `https://files.catbox.moe/y9ywvg.jpg` },
             caption: selectedStyle,
             contextInfo: { 
                 mentionedJid: [m.sender],
@@ -180,7 +180,7 @@ ${repoData.description || 'NO DESCRIPTION PROVIDED'}
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363398101781980@newsletter',
-                    newsletterName: config.OWNER_NAME || '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                    newsletterName: config.OWNER_NAME || 'RAHEEM-XMD-3🪀',
                     serverMessageId: 143
                 }
             }
@@ -188,7 +188,7 @@ ${repoData.description || 'NO DESCRIPTION PROVIDED'}
 
         // Send audio
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/uzvvj1.mp3' },
+            audio: { url: 'https://files.catbox.moe/11f9pe.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,
             contextInfo: { 
