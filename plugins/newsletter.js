@@ -36,7 +36,7 @@ async (conn, mek, m) => {
 
     // Simule un message transféré d’un autre canal
     const fakeNewsletterJid = '120363398101781980@newsletter';
-    const fakeNewsletterName = '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐';
+    const fakeNewsletterName = 'RAHEEM-XMD-3';
     const serverMessageId = 101;
     const message = `Forwarded from another newsletter:\n\n*${newsletterJid}*`;
 
