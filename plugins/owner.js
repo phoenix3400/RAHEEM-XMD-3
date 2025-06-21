@@ -29,8 +29,8 @@ async (conn, mek, m, { from }) => {
 
         // Send the owner contact message with image and audio
         await conn.sendMessage(from, {
-            image: { url: 'https://files.catbox.moe/5rfol2.jpg' }, // Image URL from your request
-            caption: `╭━━〔 *𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐* 〕━━┈⊷
+            image: { url: 'https://files.catbox.moe/a97zm1.jpg' }, // Image URL from your request
+            caption: `╭━━〔 *RAHEEM-XMD-3* 〕━━┈⊷
 ┃◈╭─────────────·๏
 ┃◈┃• *Here is the owner details*
 ┃◈┃• *Name* : *${config.OWNER_NAME}*
@@ -38,14 +38,14 @@ async (conn, mek, m, { from }) => {
 ┃◈┃• *Version*: 2.0.0 Beta
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`, // Display the owner's details
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`, // Display the owner's details
             contextInfo: {
                 mentionedJid: [`${ownerNumber.replace('+', '')}@s.whatsapp.net`], 
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363398101781980@newsletter',
-                    newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                    newsletterName: 'RAHEEM-XMD-3🪀',
                     serverMessageId: 143
                 }            
             }
@@ -53,7 +53,7 @@ async (conn, mek, m, { from }) => {
 
         // Send audio as per your request
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/gidmqw.mp3' }, // Audio URL
+            audio: { url: 'https://files.catbox.moe/t7ul1u.mp3' }, // Audio URL
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: mek });
