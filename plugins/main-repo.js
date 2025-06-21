@@ -165,7 +165,7 @@ ${repoData.description || 'No description'}
 DESCRIPTION:
 ${repoData.description || 'NO DESCRIPTION PROVIDED'}
 
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM https://wa.link/qjb21o*`;
 
         const styles = [style1, style2, style3, style4, style5, style6, style7, style8, style9, style10];
         const selectedStyle = styles[Math.floor(Math.random() * styles.length)];
@@ -188,7 +188,7 @@ ${repoData.description || 'NO DESCRIPTION PROVIDED'}
 
         // Send audio
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/11f9pe.mp3' },
+            audio: { url: 'https://files.catbox.moe/t7ul1u.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,
             contextInfo: { 
