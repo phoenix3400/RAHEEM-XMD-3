@@ -52,10 +52,10 @@ async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, groupAd
             teks += `${randomEmoji} @${mem.id.split('@')[0]}\n`;
         }
 
-        teks += "*└╼┉┉┉┉✪ HAIKO MDX ✪┉┉┉┉*";
+        teks += "*└╼┉┉┉┉✪ RAHEEM-XMD-3 ✪┉┉┉┉*";
 
         conn.sendMessage(from, { text: teks, mentions: participants.map(a => a.id) }, { quoted: mek });
-
+ 
     } catch (e) {
         console.error("TagAll Error:", e);
         reply(`❌ *Error Occurred !!*\n\n${e.message || e}`);
