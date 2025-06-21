@@ -13,7 +13,7 @@ cmd({
 },
 async (conn, mek, m, { from, sender, pushname, reply }) => {
     try {
-        const dec = `╭━━⧼ 𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐 ⧽━━╮
+        const dec = `╭━━⧼ RAHEEM-XMD-3 ⧽━━╮
 ┃ ✨ *ᴏᴡɴᴇʀ:* ${config.OWNER_NAME}
 ┃ ⚙️ *ᴍᴏᴅᴇ:* ${config.MODE}
 ┃ 📡 *ᴘʟᴀᴛғᴏʀᴍ:* GitHub
@@ -40,13 +40,13 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
 ┃⦉ ʟᴏɢᴏ
 ┃⦉ ʀᴇᴘᴏ
 ╰━━━━━━━━━━━━━━━━━━╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*
 `;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/2vosmn.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -64,7 +64,7 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
 
         // Send cool voice note with context
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/gm2hfz.mp3' },
+            audio: { url: 'https://files.catbox.moe/r20dpn.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,
             contextInfo: {
@@ -73,7 +73,7 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363398101781980@newsletter',
-                    newsletterName:'𝐏𝐑𝐎𝐅-𝐗𝐓𝐑𝐄𝐌𝐄',
+                    newsletterName:'RAHEEM-CM',
                     serverMessageId: 143
                 }
             }
@@ -134,7 +134,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -142,7 +142,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: "𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀",
+                        newsletterName: "RAHEEM-XMD-3🪀",
                         serverMessageId: 143
                     }
                 }
@@ -195,12 +195,12 @@ async (conn, mek, m, { from, quoted, reply }) => {
 ┃◈┃• cringe @tag
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/n8o5y2.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -208,7 +208,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 144
                     }
                 }
@@ -278,12 +278,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• tiks
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -291,7 +291,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
@@ -356,12 +356,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• tagadmins
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -369,7 +369,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
@@ -423,12 +423,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• poke
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -436,7 +436,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
@@ -494,12 +494,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• ytv
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -507,7 +507,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
@@ -546,12 +546,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• restart
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -559,7 +559,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
@@ -605,7 +605,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• jid
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`;
 
         await conn.sendMessage(
             from,
@@ -666,7 +666,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• readmore
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`;
 
         await conn.sendMessage(
             from,
@@ -735,12 +735,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• naruto
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
+                image: { url: `https://files.catbox.moe/a97zm1.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -748,7 +748,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
@@ -794,12 +794,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• copilot
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
+                image: { url: `` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -807,7 +807,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
