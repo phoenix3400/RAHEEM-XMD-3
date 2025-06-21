@@ -33,7 +33,7 @@ cmd({
 
     // Create the response message
     const message = `
-*HAIKO-MDX-V2 NPM SEARCH*
+*RAHEEM-XMD-3 NPM SEARCH*
 
 *🔰 NPM PACKAGE:* ${packageName}
 *📄 DESCRIPTION:* ${description}
