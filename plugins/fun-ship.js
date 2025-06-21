@@ -39,7 +39,7 @@ cmd({
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: "120363372853772240@newsletter",
-          newsletterName: "𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐",
+          newsletterName: "RAHEEM-XMD-3",
           serverMessageId: 143
         }
       }
