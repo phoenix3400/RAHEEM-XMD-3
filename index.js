@@ -44,7 +44,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['529633982655']
+  const ownerNumber = [255763111390']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -68,7 +68,7 @@ const {
   //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.replace("HAIKO~MDX~", '');
+const sessdata = config.SESSION_ID.replace("KAISEN~", '');
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
@@ -119,11 +119,11 @@ const port = process.env.PORT || 9090;
 ┃┋♻ *MODE:* *[${config.MODE}]*
 ┃┋
 ┃┋♜ *BOT REPO:* 
-┃┋     https://github.com/PROFESSEURMDX/HAIKO-MDX-V2
-┃╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┈⊷
+┃┋     https://github.com/Raheem-cm/RAHEEM-XMD-3 
+┃╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┈⊷🇹🇿
 ╰╼════════════════╾╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/09v10p.jpg` }, caption: up })
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ RAHEEM-CM*`;
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/a97zm1.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
@@ -778,7 +778,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
   }
   
   app.get("/", (req, res) => {
-  res.send("HAIKO MDX V2 STARTED ✅");
+  res.send("RAHEEM-XMD-3 STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
