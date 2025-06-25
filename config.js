@@ -5,7 +5,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "KAISEN~3lBjlQwD#-A1_JI5SRs_9-YeELd0Kot38hVwt8lD1yGD2lH502pA",
+SESSION_ID: process.env.SESSION_ID || "KAISEN~",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "false",
 // make true or false status auto seen
@@ -13,23 +13,23 @@ AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
 // make true if you want auto reply on status 
 AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "false",
 // make true if you want auto reply on status 
-AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY RAHEEM-XMD-3*",
+AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY RAHEEM-CM👑*",
 // set the auto reply massage on status reply  
-WELCOME: process.env.WELCOME || "true",
+WELCOME: process.env.WELCOME || "false",
 // true if want welcome and goodbye msg in groups    
-ADMIN_EVENTS: process.env.ADMIN_EVENTS || "true",
+ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 // make true to know who dismiss or promoted a member in group
-ANTI_LINK: process.env.ANTI_LINK || "true",
+ANTI_LINK: process.env.ANTI_LINK || "false",
 // make anti link true,false for groups 
 MENTION_REPLY: process.env.MENTION_REPLY || "false",
 // make true if want auto voice reply if someone menetion you 
-MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/a97zm1.jpg",
+MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/xp1wdz.jpg",
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
 BOT_NAME: process.env.BOT_NAME || "RAHEEM-XMD-3",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "🌸♡𝐋𝐄 𝐌𝐄𝐂  𝐃'𝐔𝐍𝐄 𝐒𝐄𝐔𝐋𝐄 𝐌𝐄𝐔𝐅♡💕",
+STICKER_NAME: process.env.STICKER_NAME || "𝗜𝗟 𝗡𝗘 𝗙𝗔𝗨 𝗣𝗔𝗦 𝗔𝗧𝗧𝗘𝗡𝗗𝗥𝗘 𝗗'𝗘̂𝗧𝗥𝗘 𝗣𝗔𝗥𝗙𝗔𝗜𝗧 𝗣𝗢𝗨𝗥 𝗖𝗢𝗠𝗠𝗘𝗡𝗖𝗘𝗥 𝗤𝗨𝗘𝗟𝗤𝗨𝗘𝗦 𝗖𝗛𝗢𝗦𝗘 𝗗𝗘 𝗕𝗜𝗘𝗡",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
@@ -41,11 +41,11 @@ OWNER_NUMBER: process.env.OWNER_NUMBER || "255763111390",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "RAHEEM-CM",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM*",
+DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ RAHEEM-CM*",
 // add bot owner name    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/xp1wdz.jpg",
 // add img for alive msg
-LIVE_MSG: process.env.LIVE_MSG || "> *RAHEEM-XMD-3 IKO LIVE*❄️",
+LIVE_MSG: process.env.LIVE_MSG || "> *ZINDA HUM YAR RAHEEM-XMD-3*❄️",
 // add alive msg here 
 READ_MESSAGE: process.env.READ_MESSAGE || "false",
 // Turn true or false for automatic read msgs
