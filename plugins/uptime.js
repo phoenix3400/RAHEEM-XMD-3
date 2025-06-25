@@ -1,78 +1,117 @@
-import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
-const { generateWAMessageFromContent, proto } = pkg;
 
-const alive = async (m, Matrix) => {
-  const uptimeSeconds = process.uptime();
-  const days = Math.floor(uptimeSeconds / (24 * 3600));
-  const hours = Math.floor((uptimeSeconds % (24 * 3600)) / 3600);
-  const minutes = Math.floor((uptimeSeconds % 3600) / 60);
-  const seconds = Math.floor(uptimeSeconds % 60);
-  
-  const prefix = /^[\\/!#.]/gi.test(m.body) ? m.body.match(/^[\\/!#.]/gi)[0] : '/';
-  const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
-    if (['alive', 'hansuptime', 'uptime'].includes(cmd)) {
+const { cmd } = require('../command');
+const { runtime } = require('../lib/functions');
+const config = require('../config');
+const pkg = require('../package.json');
 
-  const uptimeMessage = `╔════♡𝐔𝐏𝐓𝐈𝐌𝐄♡════╗
-║ *${days} Day*
-║ *${hours} Hour*
-║ *${minutes} Minute*
-║ *${seconds} Second*
-╚═══════════════╝
-`;
+cmd({
+    pattern: "uptime",
+    alias: ["runtime", "run"],
+    desc: "Show bot uptime with stylish formats",
+    category: "main",
+    react: "⏱️",
+    filename: __filename
+},
+async (conn, mek, m, { from, reply, args }) => {
+    try {
+        const uptime = runtime(process.uptime());
+        const seconds = Math.floor(process.uptime());
+        const startTime = new Date(Date.now() - seconds * 1000);
+        const version = pkg.version || "1.0.0";
 
-  const buttons = [
-      {
-        "name": "quick_reply",
-        "buttonParamsJson": JSON.stringify({
-          display_text: "Ping🚀",
-          id: `${prefix}ping`
-        })
-      }
-    ];
+        const styles = [
+`╭────『 *UPTIME* 』───╮
+│ ╭╌┈┈┈┈┈┄┄┈╌┈⊷
+│ ┆⏱️ ${uptime}
+│ ┆🧭 ${seconds} seconds
+│ ┆🚀 Started: ${startTime.toLocaleString()}
+│ ╰┄┄┄┄┄┄┄┄┄┄┈ ┈⊷
+╰────────────────╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`,
 
-  const msg = generateWAMessageFromContent(m.from, {
-    viewOnceMessage: {
-      message: {
-        messageContextInfo: {
-          deviceListMetadata: {},
-          deviceListMetadataVersion: 2
-        },
-        interactiveMessage: proto.Message.InteractiveMessage.create({
-          body: proto.Message.InteractiveMessage.Body.create({
-            text: uptimeMessage
-          }),
-          footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "> ⚡RAHEEM-XMD-3🪀"
-          }),
-          header: proto.Message.InteractiveMessage.Header.create({
-            title: "",
-            gifPlayback: true,
-            subtitle: "",
-            hasMediaAttachment: false 
-          }),
-          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-            buttons
-          }),
-          contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
+`╭╼═⧼𝗨𝗣𝗧𝗜𝗠𝗘 𝗦𝗧𝗔𝗧𝗨𝗦⧽═╾╮
+┃╭╼═══════════━┈⊷
+┃│♢ ʀᴜɴɴɪɴɢ: ${uptime}
+┃│♢ sᴇᴄᴏɴᴅs: ${seconds}
+┃│♢ sɪɴᴄᴇ: ${startTime.toLocaleDateString()}
+┃╰╼════════════┈⊷
+╰╼═══════════════╾╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`,
+
+`╭╼━━━━━━━━━━━━━━╾╮
+│        *⟬ UPTIME STATUS ⟭*  
+│╭┅┅┅┅┅┅┅┅┅┅┅╍⊷
+││ • ᴛɪᴍᴇ: ${uptime}
+││ • sᴇᴄᴏɴᴅs: ${seconds}
+││ • sᴛᴀʀᴛᴇᴅ: ${startTime.toLocaleString()}
+│╰┅┅┅┅┅┅┅┅┅┅┅┈⊷
+╰╼━━━━━━━━━━━━━━╾╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`,
+
+`╭╼┅⧼ 🅤🅟🅣🅘🅜🅔 ⧽┉╾╮
+┋ ⏳ ${uptime}
+┋ 🕰️ ${startTime.toLocaleString()}
+┋ 🔢 ${seconds} sᴇᴄᴏɴᴅs
+╰╼┉┅┉┅┉┅┉┅┉┅┉╍┅╾╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`,
+
+`╭╼═══════════════╾╮
+║  *RAHEEM-XMD 𝑼𝑷𝑻𝑰𝑴𝑬*
+║  ʀᴜɴᴛɪᴍᴇ: ${uptime}
+║  sᴇᴄᴏɴᴅs:: ${seconds}
+║  sɪɴᴄᴇʀᴇʟʏ: ${startTime.toLocaleString()}
+╰════════════════╾╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM`,
+
+`> ╭━━━━━━━━━━━━━━╾╮
+> ┃⏱️ *UᎮTIMᏋ ᎦTᏘTUᎦ* ⏱️
+> ┃🟢 ᴏɴʟɪɴᴇ ғᴏʀ: ${uptime}
+> ┃🔢 sᴇᴄᴏɴᴅs: ${seconds}
+> ┃📅 sɪɴᴄᴇ: ${startTime.toLocaleString()}
+> ╰━━━━━━━━━━━━━━╾╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`,
+
+`╭━━━━━━━━━━━━━━━━╮
+┃  RAHEEM-XMD 𝐔𝐏𝐓𝐈𝐌𝐄  
+┃╭┅┅┅┅┅┅┅┅┅┅┉┉┈⊷
+┃╏◈ ᴅᴜʀᴀᴛɪᴏɴ: ${uptime}
+┃╏◈ sᴇᴄᴏɴᴅs: ${seconds}
+┃╏◈ sᴛᴀʀᴛ ᴛɪᴍᴇs: ${startTime.toLocaleString()}
+┃╏◈ sᴛᴀʙɪʟɪᴛʏ: 100%
+┃╰┅┅┅┅┅┅┅┉┅┅┅┈⊷
+╰━━━━━━━━━━━━━━━━╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`
+        ];
+
+        let selectedStyle;
+        if (args[0] && args[0].toLowerCase().startsWith("style")) {
+            const index = parseInt(args[0].replace("style", "")) - 1;
+            if (!isNaN(index) && styles[index]) {
+                selectedStyle = styles[index];
+            } else {
+                return reply(`❌ Style not found.\n✅ Use: style1 to style${styles.length}`);
+            }
+        } else {
+            selectedStyle = styles[Math.floor(Math.random() * styles.length)];
+        }
+
+        await conn.sendMessage(from, {
+            image: { url: 'https://files.catbox.moe/xp1wdz.jpg' },
+            caption: selectedStyle,
+            contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: 255763111390',
-                  newsletterName: "RAHEEM-XMD",
-                  serverMessageId: 143
+                    newsletterJid: '120363398101781980@newsletter',
+                    newsletterName: 'RAHEEM-CM',
+                    serverMessageId: 143
                 }
-              }
-        }),
-      },
-    },
-  }, {});
+            }
+        }, { quoted: mek });
 
-  await Matrix.relayMessage(msg.key.remoteJid, msg.message, {
-    messageId: msg.key.id
-  });
+    } catch (e) {
+        console.error("Uptime Error:", e);
+        reply(`❌ Error: ${e.message}`);
     }
-};
-
-export default alive;
-            
+});
