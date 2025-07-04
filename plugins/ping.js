@@ -35,7 +35,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         const text = `╭━━━━⪻•𝐏𝐈𝐍𝐆 𝐓𝐄𝐒𝐓•⪼━━━━╮
 ┃📡𝐁𝐎𝐓: *RAHEEM-XMD-3*
 ┃🌟𝐏𝐈𝐍𝐆: *${responseTime.toFixed(2)}MS ${reactionEmoji}*
-╰━━━━━━⦉ABDULRAHIM-CM⦊━━━━━━╯
+╰━━━━━━⦉𝒜𝐵𝒟𝒰𝐿𝑅𝒜𝐻𝐼𝑀⦊━━━━━━╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM* 💙`;
 
         await conn.sendMessage(from, {
