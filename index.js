@@ -44,7 +44,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = [255763111390']
+  const ownerNumber = ['18494967948']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -111,19 +111,20 @@ const port = process.env.PORT || 9090;
   }
   });
   console.log('Plugins installed successful ✅')
-  console.log('Bot connected to whatsapp ✅')
+  console.log('RAHEEM-XMD-3 CONNECTED SUCCESSFULLY ✅')
   
-  let up = `╭╼━═⧼𝐁𝐎𝐓 𝐂𝐎𝐍𝐍𝐄𝐂𝐓⧽═━╾╮
-┃┋♚ *PRÉFIX:* *➥ {${config.PREFIX}}*
-┃┋
-┃┋♻ *MODE:* *[${config.MODE}]*
-┃┋
-┃┋♜ *BOT REPO:* 
-┃┋     https://github.com/Raheem-cm/RAHEEM-XMD-3 
-┃╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┈⊷🇹🇿
-╰╼════════════════╾╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ RAHEEM-CM*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/a97zm1.jpg` }, caption: up })
+  let up = `*╭┈───────────────╮*
+*│ ◦* *RAHEEM XMD ᴄᴏɴᴇᴄᴛᴇᴅ*
+*│ ◦* *ᴅᴇᴠ* : *RAHEEM*
+*│ ◦* *sᴀᴛᴜs* : *ᴏɴʟʏ*
+*│ ◦* *ɴᴜᴍʙᴇʀ* : +255763111390
+*│ ◦* *ɴᴜᴍʙᴇʀ* : +255763111390
+*│  ◦* *ᴘʀᴇғɪx: ${config.PREFIX}*
+*│  ◦* *ᴍᴏᴅᴇ: ${config.MODE}*
+*│  ◦* *ᴛʏᴘᴇ : ${config.PREFIX}menu* 
+*╰┈───────────────╯*
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*`;
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/41i4rb.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
@@ -210,7 +211,7 @@ const port = process.env.PORT || 9090;
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
   const udp = botNumber.split('@')[0];
-    const jawad = ('529633982655', '529633982655', '529633982655');
+    const jawad = ('255763111390', '255611109830', '25560003443');
     let isCreator = [udp, jawad, config.DEV]
 					.map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
 					.includes(mek.sender);
@@ -257,7 +258,7 @@ const port = process.env.PORT || 9090;
 				}
  //================ownerreact==============
     
-if (senderNumber.includes("529633982655") && !isReact) {
+if (senderNumber.includes("5090000000") && !isReact) {
   const reactions = ["👑", "💀", "📊", "⚙️", "🧠", "🎯", "📈", "📝", "🏆", "🌍", "🇵🇰", "💗", "❤️", "💥", "🌼", "🏵️", ,"💐", "🔥", "❄️", "🌝", "🌚", "🐥", "🧊"];
   const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
   m.react(randomReaction);
@@ -443,7 +444,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
                   }
                   if (mime.split("/")[0] === "audio") {
                     return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
-           }
+                  }
                 }
     //==========================================================
     conn.cMod = (jid, copy, text = '', sender = conn.user.id, options = {}) => {
@@ -737,7 +738,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
                         global.email
                     }\nitem2.X-ABLabel:GitHub\nitem3.URL:https://github.com/${
                         global.github
-                    }/megalodon-md\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
+                    }/gotar-xmd\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
                         global.location
                     };;;;\nitem4.X-ABLabel:Region\nEND:VCARD`,
                 });
@@ -784,5 +785,3 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
   setTimeout(() => {
   connectToWA()
   }, 4000);
-
-                                                                                                                 
