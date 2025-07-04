@@ -5,7 +5,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || " RAHEEM-XMD-2>>>ugYjxSpZ#JQod1xdTK_xHZ_MUkfqPMa6ZvqYOyNbI4c61VHi-oAY",
+SESSION_ID: process.env.SESSION_ID || " RAHEEM-XMD-2>>>",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "false",
 // make true or false status auto seen
@@ -45,7 +45,7 @@ DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ
 // add bot owner name    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/xp1wdz.jpg",
 // add img for alive msg
-LIVE_MSG: process.env.LIVE_MSG || "> *ZINDA HUM YAR RAHEEM-XMD-3*❄️",
+LIVE_MSG: process.env.LIVE_MSG || "> * 𝒜𝐵𝒟𝒰𝐿𝑅𝒜𝐻𝐼𝑀 to RAHEEM-XMD-3*❄️",
 // add alive msg here 
 READ_MESSAGE: process.env.READ_MESSAGE || "false",
 // Turn true or false for automatic read msgs
