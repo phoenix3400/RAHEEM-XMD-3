@@ -53,8 +53,8 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐏𝐑𝐎𝐅-𝐗𝐓𝐑𝐄𝐌𝐄',
+                        newsletterJid: ' 120363399470975987@newsletter',
+                        newsletterName: 'RAHEEM-CM',
                         serverMessageId: 143
                     }
                 }
@@ -72,7 +72,7 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363398101781980@newsletter',
+                    newsletterJid: ' 120363399470975987@newsletter',
                     newsletterName:'RAHEEM-CM',
                     serverMessageId: 143
                 }
@@ -141,7 +141,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: ' 120363399470975987@newsletter',
                         newsletterName: "RAHEEM-XMD-3🪀",
                         serverMessageId: 143
                     }
@@ -207,7 +207,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: ' 120363399470975987@newsletter',
                         newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 144
                     }
@@ -290,7 +290,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: ' 120363399470975987@newsletter',
                         newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
@@ -368,7 +368,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: ' 120363399470975987@newsletter',
                         newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
@@ -435,7 +435,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: ' 120363399470975987@newsletter',
                         newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
@@ -506,7 +506,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: '120363399470975987@newsletter',
                         newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
@@ -558,7 +558,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: ' 120363399470975987@newsletter',
                         newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
@@ -617,8 +617,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterJid: ' 120363399470975987@newsletter',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
@@ -678,8 +678,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
+                        newsletterJid: ' 120363399470975987@newsletter',
+                        newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
                 }
@@ -747,7 +747,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: ' 120363399470975987@newsletter',
                         newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
@@ -806,7 +806,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: ' 120363399470975987@newsletter',
                         newsletterName: 'RAHEEM-XMD-3🪀',
                         serverMessageId: 143
                     }
