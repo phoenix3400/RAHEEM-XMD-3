@@ -2,7 +2,7 @@ const { cmd } = require('../command');
 const config = require('../config');
 
 cmd({
-    pattern: "haiko",
+    pattern: "abdulrahim",
     alias: ["thanksto"],
     desc: "thanks to dev for helping",
     category: "main",
@@ -29,7 +29,7 @@ async (conn, mek, m, { from }) => {
                 forwardingScore: 1000,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363398101781980@newsletter', // remplace avec ton vrai newsletterJid si besoin
+                    newsletterJid: '120363399470975987@newsletter', // remplace avec ton vrai newsletterJid si besoin
                     newsletterName: 'RAHEEM-CM',
                     serverMessageId: 143
                 }
