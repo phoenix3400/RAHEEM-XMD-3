@@ -287,7 +287,7 @@ cmd({
 }, async (conn, mek, m, { from, reply }) => {
     try {
         // Send the mainMenu with video and caption
-        const menuVideoURL = config.MENU_VIDEO_URL || 'https://files.catbox.moe/a97zm1.jpg';
+        const menuVideoURL = config.MENU_VIDEO_URL || 'https://files.catbox.moe/3s8vfg.mp4';
         const contextInfo = {
             mentionedJid: [m.sender],
             forwardingScore: 999,
