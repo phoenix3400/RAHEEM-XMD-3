@@ -55,7 +55,7 @@ cmd({
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363372853772240@newsletter',
+          newsletterJid: '120363399470975987@newsletter',
           newsletterName: 'RAHEEM-XMD-3',
           serverMessageId: 143
         }
