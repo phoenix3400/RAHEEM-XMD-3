@@ -15,7 +15,7 @@ async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
 ╭───⪨🤖𝐒𝐓𝐀𝐓𝐔𝐒⪩───◉
-│✨ *Bot is Active & Online!*
+│✨ *Bot is Active🇹🇿 & Online!*
 │
 │🧠 *Owner:* ${config.OWNER_NAME}
 │⚡ *Version:* 2.0.0
@@ -35,7 +35,7 @@ async (conn, mek, m, { from, sender, reply }) => {
                 forwardingScore: 1000,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363398101781980@newsletter',
+                    newsletterJid: '120363399470975987@newsletter',
                     newsletterName: 'RAHEEM-XMD-3🪀',
                     serverMessageId: 143
                 }
