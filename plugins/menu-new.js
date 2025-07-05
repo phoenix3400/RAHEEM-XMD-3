@@ -43,19 +43,19 @@ cmd({
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363398101781980@newsletter',
+                newsletterJid: '120363399470975987@newsletter',
                 newsletterName: "RAHEEM CM",
                 serverMessageId: 143
             }
         };
 
-        // Function to send menu image with timeout
-        const sendMenuImage = async () => {
+        // Function to send menu video with timeout
+        const sendMenuVideo = async () => {
             try {
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/a97zm1.jpg' },
+                        video: { url: config.MENU_VIDEO_URL || 'https://files.catbox.moe/a97zm1.jpg' },
                         caption: menuCaption,
                         contextInfo: contextInfo
                     },
@@ -85,10 +85,10 @@ cmd({
             }
         };
 
-        // Send image first, then audio sequentially
+        // Send video first, then audio sequentially
         let sentMsg;
         try {
-            // Send image with 10s timeout
+            // Send video with 10s timeout
             sentMsg = await Promise.race([
                 sendMenuImage(),
                 new Promise((_, reject) => setTimeout(() => reject(new Error('Image send timeout')), 10000))
@@ -452,11 +452,11 @@ cmd({
                         const selectedMenu = menuData[receivedText];
                         
                         try {
-                            if (selectedMenu.image) {
+                            if (selectedMenu.video) {
                                 await conn.sendMessage(
                                     senderID,
                                     {
-                                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/7y24v8.jpg' },
+                                        video: { url: config.MENU_VIDEO_URL || 'https://files.catbox.moe/7y24v8.jpg' },
                                         caption: selectedMenu.content,
                                         contextInfo: contextInfo
                                     },
