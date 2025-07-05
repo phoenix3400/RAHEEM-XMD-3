@@ -6,7 +6,7 @@ cmd({
     alias: ["thanksto"],
     desc: "thanks to dev for helping",
     category: "main",
-    react: "🗯️",
+    react: "🇹🇿",
     filename: __filename
 },
 async (conn, mek, m, { from }) => {
@@ -16,7 +16,7 @@ async (conn, mek, m, { from }) => {
 ┃┃👨‍💻 𝗗𝗘𝗩:RAHEEM-CM
 ┃┃🪀 𝗡𝗨𝗠𝗕𝗘𝗥:+255763111390 
 ┃┃🛠️ 𝗕𝗡𝗔𝗠𝗘:RAHEEM-XMD-3 
-┃┃🙋‍♂️ 𝗛𝗜: @${m.sender.split("@")[0]}
+┃┃🙋‍♂️ ASALAMU ALYKUM: @${m.sender.split("@")[0]}
 ┃╰╼━━━━━━━━━━━┈⊷
 ╰╼══════════════╾╯
 > *𝑃𝑂𝑊𝐸𝑅𝐸𝐷 𝐵𝑌 RAHEEM*`;
