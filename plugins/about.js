@@ -37,7 +37,7 @@ await conn.sendMessage(from, {
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363398101781980@newsletter', // ou ton JID actuel
+            newsletterJid: '120363399470975987@newsletter', // ou ton JID actuel
             newsletterName: 'RAHEEM-XMD-3',
             serverMessageId: 143
         }
