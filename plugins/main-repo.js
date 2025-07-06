@@ -35,18 +35,20 @@ async (conn, mek, m, { from, reply }) => {
 
         const repoData = await response.json();
 
-        const message = `> ╭⭑━━➤🇹🇿 *RAHEEM-XMD REPO*
-> ┇╭────────────┈⊷
-> ┇┃♢ *ʀᴇᴘᴏsɪᴛᴏʀʏ*: ${repoData.name}
-> ┇┃♢ *ᴏᴡɴᴇʀ*: ${repoData.owner.login}
-> ┇┃♢ *sᴛᴀʀs*: ${repoData.stargazers_count}
-> ┇┃♢ *ғᴏʀᴋs*: ${repoData.forks_count}
-> ┇┃♢ *ᴜʀʟ*: ${repoData.html_url}
-> ┇┃♢ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ*:
-> ┇┃${repoData.description || 'ɴᴏ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ'}
-> ┇╰───────────┈⊷🇹🇿
-> ╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╍╯
-> ${config.DESCRIPTION}`;
+        // --- Muundo mpya wa menu ---
+        const message = `
+╭━━━〔 *RAHEEM-XMD REPO* 〕━━━╮🇹🇿
+┃ 🏷️  Jina      : *${repoData.name}*
+┃ 👤  Mmiliki    : *${repoData.owner.login}*
+┃ ⭐  Nyota      : *${repoData.stargazers_count}*
+┃ 🍴  Forks     : *${repoData.forks_count}*
+┃ 🔗  Kiungo     : *${repoData.html_url}*
+┃ 📝  Maelezo:
+┃      ${repoData.description || 'Hakuna maelezo'}
+╰━━━━━━━━━━━━━━━━━━━━━━━╯🇹🇿
+
+${config.DESCRIPTION}
+`.trim();
 
         await conn.sendMessage(from, {
             image: { url: `https://files.catbox.moe/h3bao2.jpg` },
@@ -56,7 +58,7 @@ async (conn, mek, m, { from, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363399470975987@newsletter',
+                    newsletterJid: '120363399470975987@newsletter',
                     newsletterName: config.OWNER_NAME || 'RAHEEM-XMD',
                     serverMessageId: 143
                 }
