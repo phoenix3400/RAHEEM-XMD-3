@@ -279,13 +279,13 @@ _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
 
         const contextInfo = { mentionedJid: [m.sender] };
 
-        // Send the menu image (optional)
-        const sendMenuImage = async () => {
+        // Send the menu video (optional)
+        const sendMenuVideo = async () => {
             try {
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/fghi44.jpg' },
+                        video: { url: config.MENU_VIDEO_URL || 'https://files.catbox.moe/x614v6.mp4' },
                         caption: menuCaption,
                         contextInfo
                     },
