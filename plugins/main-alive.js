@@ -8,24 +8,24 @@ cmd({
     alias: ["bot", "online"],
     desc: "Check bot is alive or not",
     category: "main",
-    react: "🗞️",
+    react: "❖",
     filename: __filename
 },
 async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
-╭───⪨🤖𝐒𝐓𝐀𝐓𝐔𝐒⪩───◉
-│✨ *Bot is Active🇹🇿 & Online!*
-│
-│🧠 *Owner:* ${config.OWNER_NAME}
-│⚡ *Version:* 2.0.0
-│📝 *Prefix:* [${config.PREFIX}]
-│📳 *Mode:* [${config.MODE}]
-│💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-│🖥️ *Host:* ${os.hostname()}
-│⌛ *Uptime:* ${runtime(process.uptime())}
-╰────────────────────◉
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM*}`;
+❖ *🤖 RAHEEM BOT STATUS* ❖─╮
+┃ 🟢 *Online & Active*
+┃ 👤 *Owner:* ${config.OWNER_NAME}
+┃ ⏳ *Uptime:* ${runtime(process.uptime())}
+┃ 💾 *Memory:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
+┃ ⚙️ *Mode:* ${config.MODE}
+┃ 🔖 *Prefix:* ${config.PREFIX}
+┃ 💻 *Host:* ${os.hostname()}
+┃ 🔢 *Version:* 2.0.0
+╰────────────────────────────╯
+    ⚡ Powered by RAHEEM CM ⚡
+`;
 
         await conn.sendMessage(from, {
             image: { url: `https://files.catbox.moe/a97zm1.jpg` },
@@ -47,4 +47,3 @@ async (conn, mek, m, { from, sender, reply }) => {
         reply(`An error occurred: ${e.message}`);
     }
 });
-          
