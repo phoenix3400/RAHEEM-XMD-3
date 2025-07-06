@@ -6,7 +6,7 @@ cmd({
     pattern: "repo",
     alias: ["sc", "script", "info"],
     desc: "Fetch GitHub repository information",
-    react: "🪃",
+    react: "✨",
     category: "info",
     filename: __filename,
 },
@@ -21,7 +21,7 @@ async (conn, mek, m, { from, reply }) => {
 
         const response = await fetch(`https://api.github.com/repos/${username}/${repoName}`, {
             headers: {
-                'User-Agent': 'RAHEEM-XMD-3'
+                'User-Agent': 'RAHEEM-XMD'
             }
         });
 
@@ -35,29 +35,29 @@ async (conn, mek, m, { from, reply }) => {
 
         const repoData = await response.json();
 
-        const message = `╭╼┉⧼⧼ RAHEEM XMD 3 𝐑𝐄𝐏𝐎 ⧽⧽┉╾╮
-┇╭───────────────┈⊷
-┇┃♢ *ʀᴇᴘᴏsɪᴛᴏʀʏ*: ${repoData.name}
-┇┃♢ *ᴏᴡɴᴇʀ*: ${repoData.owner.login}
-┇┃♢ *sᴛᴀʀs*: ${repoData.stargazers_count}
-┇┃♢ *ғᴏʀᴋs*: ${repoData.forks_count}
-┇┃♢ *ᴜʀʟ*: ${repoData.html_url}
-┇┃♢ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ*:
-┇┃${repoData.description || 'ɴᴏ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ'}
-┇╰───────────────┈⊷
-╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╍╯
+        const message = `> ╭⭑━━➤🇹🇿 *RAHEEM-XMD REPO*
+> ┇╭────────────┈⊷
+> ┇┃♢ *ʀᴇᴘᴏsɪᴛᴏʀʏ*: ${repoData.name}
+> ┇┃♢ *ᴏᴡɴᴇʀ*: ${repoData.owner.login}
+> ┇┃♢ *sᴛᴀʀs*: ${repoData.stargazers_count}
+> ┇┃♢ *ғᴏʀᴋs*: ${repoData.forks_count}
+> ┇┃♢ *ᴜʀʟ*: ${repoData.html_url}
+> ┇┃♢ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ*:
+> ┇┃${repoData.description || 'ɴᴏ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ'}
+> ┇╰───────────┈⊷🇹🇿
+> ╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╍╯
 > ${config.DESCRIPTION}`;
 
         await conn.sendMessage(from, {
-            image: { url: ` https://files.catbox.moe/a97zm1.jpg'` },
+            image: { url: `https://files.catbox.moe/h3bao2.jpg` },
             caption: message,
             contextInfo: { 
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363399470975987@newsletter',
-                    newsletterName: config.OWNER_NAME || 'RAHEEM-XMD-3',
+                        newsletterJid: '120363399470975987@newsletter',
+                    newsletterName: config.OWNER_NAME || 'RAHEEM-XMD',
                     serverMessageId: 143
                 }
             }
@@ -68,4 +68,3 @@ async (conn, mek, m, { from, reply }) => {
         reply("❌ Une erreur est survenue lors de la récupération du dépôt.");
     }
 });
-              
