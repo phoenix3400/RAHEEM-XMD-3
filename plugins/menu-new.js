@@ -279,8 +279,8 @@ _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
 
         const contextInfo = { mentionedJid: [m.sender] };
 
-        // Send the menu video (optional)
-        const sendMenuVideo = async () => {
+        // Send the menu image (optional)
+        const sendMenuImage = async () => {
             try {
                 return await conn.sendMessage(
                     from,
