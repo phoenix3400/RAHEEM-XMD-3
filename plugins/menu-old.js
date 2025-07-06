@@ -610,7 +610,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
+                image: { url: `https://files.catbox.moe/1u2sr5.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
