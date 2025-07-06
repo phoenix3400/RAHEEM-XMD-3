@@ -30,7 +30,7 @@ let about = `*╭══⪨ 𝙱𝙸𝙾𝙶𝚁𝙰𝙿𝙷𝙸𝙴 ⪩══╮
 > *𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 RAHEEM-CM*
 *╰╼════════════════╾╯*`
 await conn.sendMessage(from, {
-    image: { url: 'https://files.catbox.moe/a97zm1.jpg' },
+    image: { url: 'https://files.catbox.moe/1u2sr5.jpg' },
     caption: about,
     contextInfo: {
         mentionedJid: [m.sender],
