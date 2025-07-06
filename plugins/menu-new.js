@@ -274,7 +274,7 @@ cmd({
 ┃ cringe
 ╰────────────────────────────╯
 
-_✨ Powered by ${config.Raheem_cm} ✨_
+_✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
         `.trim();
 
         const contextInfo = { mentionedJid: [m.sender] };
