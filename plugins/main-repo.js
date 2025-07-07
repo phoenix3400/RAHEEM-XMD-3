@@ -38,13 +38,13 @@ async (conn, mek, m, { from, reply }) => {
         // --- Muundo mpya wa menu ---
         const message = `
 ╭━━━〔 *RAHEEM-XMD REPO* 〕━━━╮🇹🇿
-┃ 🏷️  Jina      : *${repoData.name}*
-┃ 👤  Mmiliki    : *${repoData.owner.login}*
-┃ ⭐  Nyota      : *${repoData.stargazers_count}*
+┃ 🏷️  B.name      : *${repoData.name}*
+┃ 👤  owner    : *${repoData.owner.login}*
+┃ ⭐  stars      : *${repoData.stargazers_count}*
 ┃ 🍴  Forks     : *${repoData.forks_count}*
-┃ 🔗  Kiungo     : *${repoData.html_url}*
-┃ 📝  Maelezo:
-┃      ${repoData.description || 'Hakuna maelezo'}
+┃ 🔗  repo     : *${repoData.html_url}*
+┃ 📝  Discription:
+┃      ${repoData.description || 'No Discription'}
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯🇹🇿
 
 ${config.DESCRIPTION}
