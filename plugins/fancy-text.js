@@ -1,24 +1,32 @@
-const { zokou } = require("../framework/zokou");
-const fancy = require("../commandes/style");
+const axios = require("axios");
+const { cmd } = require("../command");
 
-zokou({ nomCom: "fancy", categorie: "Fun", reaction: "💫" }, async (dest, zk, commandeOptions) => {
-    const { arg, repondre, prefixe } = commandeOptions;
-    const id = arg[0]?.match(/\d+/)?.join('');
-    const text = arg.slice(1).join(" ");
-
-    try {
-        if (id === undefined || text === undefined) {
-            return await repondre(`\nExemple : ${prefixe}fancy 10 RAHEEM-XMD\n` + String.fromCharCode(8206).repeat(4001) + fancy.list('RAHEEM-XMD', fancy));
-        }
-
-        const selectedStyle = fancy[parseInt(id) - 1];
-        if (selectedStyle) {
-            return await repondre(fancy.apply(selectedStyle, text));
-        } else {
-            return await repondre('_Style introuvable :(_');
-        }
-    } catch (error) {
-        console.error(error);
-        return await repondre('_Une erreur s\'est produite :(_');
+cmd({
+  pattern: "fancy",
+  alias: ["font", "style"],
+  react: "✍️",
+  desc: "Convert text into various fonts.",
+  category: "tools",
+  filename: __filename
+}, async (conn, m, store, { from, quoted, args, q, reply }) => {
+  try {
+    if (!q) {
+      return reply("❎ Please provide text to convert into fancy fonts.\n\n*Example:* .fancy Hello");
     }
+
+    const apiUrl = `https://www.dark-yasiya-api.site/other/font?text=${encodeURIComponent(q)}`;
+    const response = await axios.get(apiUrl);
+    
+    if (!response.data.status) {
+      return reply("❌ Error fetching fonts. Please try again later.");
+    }
+
+    const fonts = response.data.result.map(item => `*${item.name}:*\n${item.result}`).join("\n\n");
+    const resultText = `✨ *Fancy Fonts Converter* ✨\n\n${fonts}\n\n> *Powered by Raheem-cm*`;
+
+    await conn.sendMessage(from, { text: resultText }, { quoted: m });
+  } catch (error) {
+    console.error("❌ Error in fancy command:", error);
+    reply("⚠️ An error occurred while fetching fonts.");
+  }
 });
