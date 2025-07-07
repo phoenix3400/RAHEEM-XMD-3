@@ -81,6 +81,8 @@ AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
 // make it true for auto recoding 
 AUTO_STICKER: process.env.AUTO_STICKER || "false",
 //// make anti sticker true,false for groups
+CHAT_BOT: process.env.CHAT_BOT === 'true',
+ CHAT_BOT_MODE: process.env.CHAT_BOT_MODE || "public",
 }; 
 
 
