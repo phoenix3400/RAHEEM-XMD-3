@@ -1,4 +1,4 @@
- const { cmd } = require('../command');
+const { cmd } = require('../command');
 const fetch = require('node-fetch');
 
 cmd({
@@ -15,7 +15,7 @@ async (conn, mek, m, {
     try {
         const text = args.join(" ");
         if (!text || !text.includes('|')) {
-            return reply(`*❌ Format invalide !*\n➤ Exemple : \`.phlogo xtreme | xmd\``);
+            return reply(`*❌ Format invalide !*\n➤ Exemple : \`.phlogo raheem | xmd\``);
         }
 
         const [text1, text2] = text.split('|').map(t => t.trim());
