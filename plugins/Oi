@@ -1,0 +1,36 @@
+const { cmd } = require('../command');
+const config = require("../config");
+
+// Anti-Sticker System
+cmd({
+  'on': "body"
+}, async (conn, m, store, {
+  from,
+  sender,
+  isGroup,
+  isAdmins,
+  isBotAdmins,
+  reply
+}) => {
+  try {
+    // Run only in groups, if bot is admin and user is not an admin
+    if (!isGroup || isAdmins || !isBotAdmins) return;
+
+    // Check if message is a sticker and feature is turned on
+    if (m.mtype === 'stickerMessage' && config.ANTI_STICKER_KICK === 'on') {
+      // Delete the sticker
+      await conn.sendMessage(from, { delete: m.key });
+
+      // Warn and remove the user
+      await conn.sendMessage(from, {
+        text: `⚠️ Stickers are not allowed in this group.\n@${sender.split('@')[0]} has been removed. 🚫`,
+        mentions: [sender]
+      }, { quoted: m });
+
+      await conn.groupParticipantsUpdate(from, [sender], "remove");
+    }
+  } catch (error) {
+    console.error(error);
+    reply("⚠️ An error occurred in the Anti-Sticker system.");
+  }
+});
