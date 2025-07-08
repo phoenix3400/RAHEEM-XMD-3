@@ -285,7 +285,7 @@ _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
                 return await conn.sendMessage(
                     from,
                     {
-                        video: { url: config.MENU_GIF_URL || 'https://files.catbox.moe/m589p9.mp4' },
+                        video: { url: config.MENU_GIF_URL || 'https://files.catbox.moe/yu67gs.mp4' },
                         caption: menuCaption,
                         contextInfo
                     },
