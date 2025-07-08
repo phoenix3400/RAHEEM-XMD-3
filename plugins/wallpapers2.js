@@ -1,5 +1,5 @@
 cmd({
-  pattern: 'rw',
+  pattern: 'rw2',
   alias: ['randomwall', 'wallpaper'],
   react: '🌌',
   desc: 'Download random wallpapers based on keywords.',
