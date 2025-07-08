@@ -1,31 +1,20 @@
-const { cmd } = require('../command');
-const axios = require('axios');
-
 cmd({
-    pattern: 'rw2',
-    alias: ['wall', 'wallpaper'],
-    desc: 'Download high-quality wallpapers from Wallhaven.cc',
-    category: 'media',
-    use: '.rw2 <keyword>'
-}, async (m, sock, args) => {
-    try {
-        const keyword = args[0] || 'anime';  // Default: anime
-        const apiUrl = `https://wallhaven.cc/api/v1/search?q=${keyword}&apikey=YOUR_API_KEY`;
-        
-        const response = await axios.get(apiUrl);
-        const wallpapers = response.data.data;
-
-        if (wallpapers.length > 0) {
-            const randomWall = wallpapers[Math.floor(Math.random() * wallpapers.length)];
-            await sock.sendMessage(m.chat, {
-                image: { url: randomWall.path },
-                caption: `🖼️ *${keyword} Wallpaper*`
-            }, { quoted: m });
-        } else {
-            m.reply(`❌ No wallpapers found for *${keyword}*`);
-        }
-    } catch (error) {
-        console.error(error);
-        m.reply('❌ Error fetching wallpapers. Try again later.');
-    }
+  pattern: 'rw2',
+  alias: ['randomwall', 'wallpaper'],
+  react: '🌌',
+  desc: 'Send the "mzee" image as wallpaper.',
+  category: 'wallpapers',
+  use: '.rw',
+  filename: __filename
+}, async (bot, msg, msgInfo, { from, reply }) => {
+  try {
+    const caption = '🌌 Random Wallpaper:\n\nmzee';
+    await bot.sendMessage(from, {
+      image: { url: 'https://files.catbox.moe/5q4v44.jpg' },
+      caption: caption
+    }, { quoted: msg });
+  } catch (error) {
+    console.log(error);
+    reply('❌ An error occurred while sending the image.');
+  }
 });
