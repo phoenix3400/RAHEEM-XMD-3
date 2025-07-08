@@ -2,7 +2,7 @@ const { cmd } = require('../command');
 const { getBuffer, fetchJson } = require('../lib/functions');
 
 cmd({
-    pattern: "profile",
+    pattern: "person",
     react: "👤",
     alias: ["userinfo", "profile"],
     desc: "Get complete user profile information",
@@ -83,7 +83,7 @@ async (conn, mek, m, { from, sender, isGroup, reply, quoted, participants }) => 
         let groupRole = "";
         if (isGroup) {
             const participant = participants.find(p => p.id === userJid);
-            groupRole = participant?.admin ? "👑ADMIN" : "👥MEMBER";
+            groupRole = participant?.admin ? "👑 Admin" : "👥 Member";
         }
 
         // 7. FORMAT OUTPUT
@@ -92,19 +92,19 @@ async (conn, mek, m, { from, sender, isGroup, reply, quoted, participants }) => 
             "No bio available";
 
         const userInfo = `
-╭╼⪨ *PP INFORMATION* ⪩╾╮
-╽📛 *NAME:* ${userName}
-┃🔢 *NUMBER:* ${userJid.replace(/@.+/, '')}
-┃📌 *ACCOUNT TYPE:* ${user.isBusiness ? "💼 Business" : user.isEnterprise ? "🏢 Enterprise" : "👤 Personal"}
-┃📝 *ABOUT:*
+*GC MEMBER INFORMATION 🧊*
+
+📛 *Name:* ${userName}
+🔢 *Number:* ${userJid.replace(/@.+/, '')}
+📌 *Account Type:* ${user.isBusiness ? "💼 Business" : user.isEnterprise ? "🏢 Enterprise" : "👤 Personal"}
+
+*📝 About:*
 ${formattedBio}
-┃⚙️ *ACCOUNT INFO:*
-┃✅ *REGISTERED:* ${user.isUser ? "Yes" : "No"}
-┃🛡️ *VERIFIED:* ${user.verifiedName ? "✅ VERIFIED" : "❌ Not verified ╰╼━━━━━━━━━━━━━━━━╾╯"}
-${isGroup?`╭━━━━━━━━━━━━━━━━━╾╮
-┃👥 *GROUP ROLE:* ${groupRole}
-╰╼━━━━━━━━━━━━━━━━╾╯
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-XMD-3` : ''}
+
+*⚙️ Account Info:*
+✅ Registered: ${user.isUser ? "Yes" : "No"}
+🛡️ Verified: ${user.verifiedName ? "✅ Verified" : "❌ Not verified"}
+${isGroup ? `👥 *Group Role:* ${groupRole}` : ''}
 `.trim();
 
         // 8. SEND RESULT
@@ -119,5 +119,3 @@ ${isGroup?`╭━━━━━━━━━━━━━━━━━╾╮
         reply(`❌ Error: ${e.message || "Failed to fetch profile"}`);
     }
 });
-
-            
