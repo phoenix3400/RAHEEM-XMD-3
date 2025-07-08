@@ -1,30 +1,35 @@
 const axios = require('axios');
 const config = require('../config');
-const fs = require('fs');
-const path = require('path');
-const {cmd , commands} = require('../command')
+const { cmd } = require('../command');
 
-
-// Replace this with your actual GitHub RAW JSON URL
+// Auto-reply JSON hosted on GitHub
 const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/RAHEEM-XMD-3/RAHEEM-DATA/main/autoreply.json';
 
 cmd({
-  on: "body"
-},
-async (conn, mek, m, { body }) => {
+  name: 'autoreply',
+  type: 'all' // Inasikiliza kila ujumbe
+}, async (conn, msg, m, { body }) => {
   try {
+    // Hakikisha message iko
+    if (!body || msg.key?.fromMe || body.startsWith('.')) return;
+
+    // Chukua JSON kutoka GitHub
     const res = await axios.get(GITHUB_RAW_URL);
     const data = res.data;
 
-    for (const text in data) {
-      if (body.toLowerCase() === text.toLowerCase()) {
-        if (config.AUTO_REPLY === 'true') {
-          await m.reply(data[text]);
+    // Normalize input
+    const incomingText = body.trim().toLowerCase();
+
+    // Tafuta kama text ipo kwenye JSON
+    for (const key in data) {
+      if (incomingText === key.toLowerCase()) {
+        if (config.AUTO_REPLY?.toLowerCase() === 'true') {
+          await m.reply(data[key]);
         }
         break;
       }
     }
   } catch (err) {
-    console.error('Auto-reply fetch error:', err.message);
+    console.error('❌ Auto-reply error:', err.message);
   }
 });
