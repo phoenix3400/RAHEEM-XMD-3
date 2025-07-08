@@ -1,5 +1,10 @@
 const { cmd } = require('../command');
-const config = require("../config");
+const fs = require('fs').promises; // Import fs.promises for async file operations
+const path = require('path');     // Import path to resolve file paths
+
+// Assuming config.js exports an object, or config.json is directly read
+// For this example, let's assume config.json is the source
+const configPath = path.join(__dirname, '../config.json'); // Adjust path as needed
 
 cmd({
   pattern: "antisticker",
@@ -13,8 +18,20 @@ cmd({
     return reply("❌ Usage: `.antisticker on` or `.antisticker off`");
   }
 
-  // Set value in config or temporary memory
-  config.ANTI_STICKER_KICK = mode;
+  try {
+    // Read the current config
+    const currentConfig = JSON.parse(await fs.readFile(configPath, 'utf8'));
 
-  reply(`✅ *ANTI_STICKER* has been turned *${mode.toUpperCase()}*.`);
+    // Update the ANTI_STICKER_KICK value
+    currentConfig.ANTI_STICKER_KICK = mode;
+
+    // Write the updated config back to the file
+    await fs.writeFile(configPath, JSON.stringify(currentConfig, null, 2), 'utf8');
+
+    reply(`✅ *ANTI_STICKER* has been turned *${mode.toUpperCase()}*.`);
+
+  } catch (error) {
+    console.error("Failed to update ANTI_STICKER setting:", error);
+    return reply("❌ An error occurred while updating the setting.");
+  }
 });
