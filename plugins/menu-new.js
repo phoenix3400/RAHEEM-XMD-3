@@ -10,7 +10,7 @@ cmd({
 }, async (conn, mek, m, { from }) => {
     try {
         const menuCaption = `
->╭──❖  ${config.BOT_NAME || '𝑹𝑨𝑯𝑬𝑬𝑴-𝑿𝑴𝑫-3'}  ❖──╮
+╭──❖  ${config.BOT_NAME || '𝑹𝑨𝑯𝑬𝑬𝑴-𝑿𝑴𝑫-3'}  ❖──╮
 ┃ 👑 Owner: ${config.OWNER_NAME}
 ┃ 🛠️ Mode: ${config.MODE}
 ┃ 🕒 Version: 2.0.0
@@ -20,18 +20,18 @@ cmd({
          
 
 ╭─❖ *🏠 MAIN COMMANDS* ❖─╮
-┃ ping
-┃ ping2
-┃ speed
-┃ live
-┃ alive
-┃ runtime
-┃ uptime
-┃ repo
-┃ owner
-┃ menu
-┃ menu2
-┃ restart
+┃> ping
+┃  ping2
+┃  speed
+┃  live
+┃  alive
+┃  runtime
+┃  uptime
+┃  repo
+┃  owner
+┃  menu
+┃  menu2
+┃  restart
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
          
 
