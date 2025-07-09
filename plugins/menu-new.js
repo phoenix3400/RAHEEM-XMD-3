@@ -10,16 +10,32 @@ cmd({
 }, async (conn, mek, m, { from }) => {
     try {
         const menuCaption = `
-const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 ⪩━━┈⊷🇹🇿
-┃
-┃ 🏷️ *Owner:* ${config.OWNER_NAME}
-┃ 💻 *NodeJs Multi Device*
-┃ 🌍 *Platform:* GitHub
-┃ ⚡ *Mode:* [${config.MODE}]
-┃ 🆔 *Prefix:* ➥${config.PREFIX}
-┃ 🏷️ *Version:* 2.0.0 Beta
-┃ 
-┣━━⪨ *DOWNLOAD COMMANDS* ⪩━━┈⊷
+╭──❖  ${config.BOT_NAME || '𝑹𝑨𝑯𝑬𝑬𝑴-𝑿𝑴𝑫-3'}  ❖──╮
+┃ 👑 Owner: ${config.OWNER_NAME}
+┃ 🛠️ Mode: ${config.MODE}
+┃ 🕒 Version: 2.0.0
+!  🧭 Timenow: ${config.TIME}
+┃ 🔖 Prefix: ${config.PREFIX}
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *🏠 MAIN COMMANDS* ❖─╮
+┃ ping
+┃ ping2
+┃ speed
+┃ live
+┃ alive
+┃ runtime
+┃ uptime
+┃ repo
+┃ owner
+┃ menu
+┃ menu2
+┃ restart
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *📥 DOWNLOAD MENU* ❖─╮
 ┃ facebook
 ┃ mediafire
 ┃ tiktok
@@ -45,7 +61,10 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ gdrive
 ┃ ssweb
 ┃ tiks
-┣━━⪨ *GROUP COMMANDS* ⪩━━┈⊷
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *👥 GROUP MENU* ❖─╮
 ┃ grouplink
 ┃ kickall
 ┃ kickall2
@@ -80,7 +99,10 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ hidetag
 ┃ tagall
 ┃ tagadmins
-┣━━⪨ *FUN COMMANDS* ⪩━━┈⊷
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *🎉 FUN MENU* ❖─╮
 ┃ shapar
 ┃ rate
 ┃ insult
@@ -104,7 +126,10 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ hug
 ┃ hifi
 ┃ poke
-┣━━⪨ *OWNER COMMANDS* ⪩━━┈⊷
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *👑 OWNER MENU* ❖─╮
 ┃ owner
 ┃ menu
 ┃ menu2
@@ -123,7 +148,10 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ ping
 ┃ gjid
 ┃ jid
-┣━━⪨ *AI COMMANDS* ⪩━━┈⊷
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *🤖 AI MENU* ❖─╮
 ┃ ai
 ┃ gpt3
 ┃ gpt2
@@ -140,7 +168,10 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ imagine
 ┃ imagine2
 ┃ copilot
-┣━━⪨ *ANIME COMMANDS* ⪩━━┈⊷
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *🖌️ ANIME MENU* ❖─╮
 ┃ fack
 ┃ truth
 ┃ dare
@@ -150,7 +181,6 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ waifu
 ┃ neko
 ┃ megnumin
-┃ neko
 ┃ maid
 ┃ loli
 ┃ animegirl
@@ -167,7 +197,10 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ animenews
 ┃ foxgirl
 ┃ naruto
-┣━━⪨ *CONVERT COMMANDS* ⪩━━┈⊷
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *🔄 CONVERT MENU* ❖─╮
 ┃ sticker
 ┃ sticker2
 ┃ emojimix
@@ -187,7 +220,10 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ repeat
 ┃ ask
 ┃ readmore
-┣━━⪨ *OTHER COMMANDS* ⪩━━┈⊷
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *📌 OTHER MENU* ❖─╮
 ┃ timenow
 ┃ date
 ┃ count
@@ -217,7 +253,10 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ githubstalk
 ┃ yts
 ┃ ytv
-┣━━⪨ *REACTIONS COMMANDS* ⪩━━┈⊷
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
+         
+
+╭─❖ *💞 REACTIONS MENU* ❖─╮
 ┃ bully
 ┃ cuddle
 ┃ cry
@@ -244,25 +283,7 @@ const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 
 ┃ poke
 ┃ dance
 ┃ cringe
-┣━━⪨ *MAIN COMMANDS* ⪩━━┈⊷
-┃ ping
-┃ ping2
-┃ speed
-┃ live
-┃ alive
-┃ runtime
-┃ uptime
-┃ repo
-┃ owner
-┃ menu
-┃ menu2
-┃ restart
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━⊷🇹🇿
-> *Powered by RAHEEM CM*
-`,
-    image: true
-};
-powerd by *sir Raheem-cm*
+╰────────────────────────────╯ powerd by *sir Raheem-cm*
          
 _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
         `.trim();
