@@ -13,7 +13,8 @@ cmd({
 ╭──❖  ${config.BOT_NAME || '𝑹𝑨𝑯𝑬𝑬𝑴-𝑿𝑴𝑫-3'}  ❖──╮
 ┃ 👑 Owner: ${config.OWNER_NAME}
 ┃ 🛠️ Mode: ${config.MODE}
-┃ 🕒 Version: 1.0.0
+┃ 🕒 Version: 2.0.0
+🇹🇿🧭 plugins
 ┃ 🔖 Prefix: ${config.PREFIX}
 ╰────────────────────────────╯
 
