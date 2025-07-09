@@ -10,7 +10,7 @@ cmd({
 }, async (conn, mek, m, { from }) => {
     try {
         const menuCaption = `
-╭──❖  ${config.BOT_NAME || 'RAHEEM-XMD-3'}  ❖──╮
+╭──❖  ${config.BOT_NAME || '𝑹𝑨𝑯𝑬𝑬𝑴-𝑿𝑴𝑫-3'}  ❖──╮
 ┃ 👑 Owner: ${config.OWNER_NAME}
 ┃ 🛠️ Mode: ${config.MODE}
 ┃ 🕒 Version: 1.0.0
@@ -285,7 +285,7 @@ _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
                 return await conn.sendMessage(
                     from,
                     {
-                        video: { url: config.MENU_GIF_URL || 'https://files.catbox.moe/yu67gs.mp4' },
+                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/aq881d.jpg' },
                         caption: menuCaption,
                         contextInfo
                     },
