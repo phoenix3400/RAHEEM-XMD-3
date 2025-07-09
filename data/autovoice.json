@@ -1,11 +1,13 @@
 {
-  "good morning":  "https://files.catbox.moe/juudad.mp3",
-  "good afternoon":  "https://files.catbox.moe/2qdvzd.mp3",
-  "good night":  "https://files.catbox.moe/9jpmx2.mp3",
-  "raheem":  "https://files.catbox.moe/t7ul1u.mp3",
-  "kaka":  "https://files.catbox.moe/5cpr03.mp3",
-  "mkuu":  "https://files.catbox.moe/7y4a20.mp3",
-  "haha":  "https://files.catbox.moe/vs9ebs.mp3",
-  "hi": "https://files.catbox.moe/mydizf.mp3",
-  "i love you": "https://files.catbox.moe/11f9pe.mp3"
+  "kaka": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/audios_audios_kaka.wav",
+  "hi": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/autovoice_hi.mp3",
+  "bye": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/autovoice_bye.mp3",
+  "darling": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/audios_darling.wav"
+  "goodafternoon": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/audios_goodafternoon (1).wav"
+  "goodmorning": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/audios_goodmorning (1).wav",
+  "mkuu": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/audios_mkuu.wav",
+  "love": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/audios_love.m4a",
+  "hey": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/audios_hey.wav",
+  "raheem": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/AUD-20250608-WA0092.aac",
+  "goodnight": "https://github.com/Raheem-cm/RAHEEM-DATA/raw/refs/heads/main/autovoice/audios_goodnight.wav",
 }
