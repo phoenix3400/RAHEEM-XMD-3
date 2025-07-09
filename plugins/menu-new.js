@@ -10,32 +10,16 @@ cmd({
 }, async (conn, mek, m, { from }) => {
     try {
         const menuCaption = `
-╭──❖  ${config.BOT_NAME || '𝑹𝑨𝑯𝑬𝑬𝑴-𝑿𝑴𝑫-3'}  ❖──╮
-┃ 👑 Owner: ${config.OWNER_NAME}
-┃ 🛠️ Mode: ${config.MODE}
-┃ 🕒 Version: 2.0.0
-!  🧭 Timenow: ${config.TIME}
-┃ 🔖 Prefix: ${config.PREFIX}
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *🏠 MAIN COMMANDS* ❖─╮
-┃> ping
-┃  ping2
-┃  speed
-┃  live
-┃  alive
-┃  runtime
-┃  uptime
-┃  repo
-┃  owner
-┃  menu
-┃  menu2
-┃  restart
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *📥 DOWNLOAD MENU* ❖─╮
+const mainMenu =╭━━⪨ 𝐑𝐀𝐇𝐄𝐄𝐌 𝐗𝐌𝐃 𝐁𝐎𝐓 ⪩━━┈⊷🇹🇿
+┃
+┃ 🏷️ *Owner:* ${config.OWNER_NAME}
+┃ 💻 *NodeJs Multi Device*
+┃ 🌍 *Platform:* GitHub
+┃ ⚡ *Mode:* [${config.MODE}]
+┃ 🆔 *Prefix:* ➥${config.PREFIX}
+┃ 🏷️ *Version:* 2.0.0 Beta
+┃ 
+┣━━⪨ *DOWNLOAD COMMANDS* ⪩━━┈⊷
 ┃ facebook
 ┃ mediafire
 ┃ tiktok
@@ -61,10 +45,7 @@ cmd({
 ┃ gdrive
 ┃ ssweb
 ┃ tiks
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *👥 GROUP MENU* ❖─╮
+┣━━⪨ *GROUP COMMANDS* ⪩━━┈⊷
 ┃ grouplink
 ┃ kickall
 ┃ kickall2
@@ -99,10 +80,7 @@ cmd({
 ┃ hidetag
 ┃ tagall
 ┃ tagadmins
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *🎉 FUN MENU* ❖─╮
+┣━━⪨ *FUN COMMANDS* ⪩━━┈⊷
 ┃ shapar
 ┃ rate
 ┃ insult
@@ -126,10 +104,7 @@ cmd({
 ┃ hug
 ┃ hifi
 ┃ poke
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *👑 OWNER MENU* ❖─╮
+┣━━⪨ *OWNER COMMANDS* ⪩━━┈⊷
 ┃ owner
 ┃ menu
 ┃ menu2
@@ -148,10 +123,7 @@ cmd({
 ┃ ping
 ┃ gjid
 ┃ jid
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *🤖 AI MENU* ❖─╮
+┣━━⪨ *AI COMMANDS* ⪩━━┈⊷
 ┃ ai
 ┃ gpt3
 ┃ gpt2
@@ -168,10 +140,7 @@ cmd({
 ┃ imagine
 ┃ imagine2
 ┃ copilot
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *🖌️ ANIME MENU* ❖─╮
+┣━━⪨ *ANIME COMMANDS* ⪩━━┈⊷
 ┃ fack
 ┃ truth
 ┃ dare
@@ -181,6 +150,7 @@ cmd({
 ┃ waifu
 ┃ neko
 ┃ megnumin
+┃ neko
 ┃ maid
 ┃ loli
 ┃ animegirl
@@ -197,10 +167,7 @@ cmd({
 ┃ animenews
 ┃ foxgirl
 ┃ naruto
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *🔄 CONVERT MENU* ❖─╮
+┣━━⪨ *CONVERT COMMANDS* ⪩━━┈⊷
 ┃ sticker
 ┃ sticker2
 ┃ emojimix
@@ -220,10 +187,7 @@ cmd({
 ┃ repeat
 ┃ ask
 ┃ readmore
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *📌 OTHER MENU* ❖─╮
+┣━━⪨ *OTHER COMMANDS* ⪩━━┈⊷
 ┃ timenow
 ┃ date
 ┃ count
@@ -253,10 +217,7 @@ cmd({
 ┃ githubstalk
 ┃ yts
 ┃ ytv
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-
-╭─❖ *💞 REACTIONS MENU* ❖─╮
+┣━━⪨ *REACTIONS COMMANDS* ⪩━━┈⊷
 ┃ bully
 ┃ cuddle
 ┃ cry
@@ -283,7 +244,25 @@ cmd({
 ┃ poke
 ┃ dance
 ┃ cringe
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
+┣━━⪨ *MAIN COMMANDS* ⪩━━┈⊷
+┃ ping
+┃ ping2
+┃ speed
+┃ live
+┃ alive
+┃ runtime
+┃ uptime
+┃ repo
+┃ owner
+┃ menu
+┃ menu2
+┃ restart
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━⊷🇹🇿
+> *Powered by RAHEEM CM*
+`,
+    image: true
+};
+powerd by *sir Raheem-cm*
          
 _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
         `.trim();
