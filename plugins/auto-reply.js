@@ -1,30 +1,30 @@
 const axios = require('axios');
 const config = require('../config');
-const { cmd } = require('../command');
+const fs = require('fs');
+const path = require('path');
+const {cmd , commands} = require('../command')
 
-// JSON ya auto reply (from GitHub)
-const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/RAHEEM-XMD-3/RAHEEM-DATA/main/autoreply.json';
+
+// Replace this with your actual GitHub RAW JSON URL
+const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/criss-vevo/CRISS-DATA/main/autoreply.json';
 
 cmd({
-  name: 'autoreply',
-  type: 'all'
-}, async (conn, msg, m, { body }) => {
+  on: "body"
+},
+async (conn, mek, m, { body }) => {
   try {
-    if (!body || msg.key?.fromMe || body.startsWith('.')) return;
-
     const res = await axios.get(GITHUB_RAW_URL);
     const data = res.data;
-    const incomingText = body.trim().toLowerCase();
 
-    for (const key in data) {
-      if (incomingText.includes(key.toLowerCase())) {
-        if (config.AUTO_REPLY?.toLowerCase() === 'true') {
-          await m.reply(data[key]);
+    for (const text in data) {
+      if (body.toLowerCase() === text.toLowerCase()) {
+        if (config.AUTO_REPLY === 'true') {
+          await m.reply(data[text]);
         }
         break;
       }
     }
   } catch (err) {
-    console.error('❌ Auto-reply error:', err.message);
+    console.error('Auto-reply fetch error:', err.message);
   }
 });
