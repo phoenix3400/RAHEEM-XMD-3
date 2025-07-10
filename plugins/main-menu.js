@@ -1,306 +1,152 @@
- const config = require('../config');
+const config = require('../config');
 const { cmd } = require('../command');
+const fs = require('fs');
 
 cmd({
-    pattern: "menu",
-    desc: "Show full main menu (vertical stylish box)",
-    category: "menu",
-    react: "📜",
-    filename: __filename
+  pattern: 'menu2',
+  desc: 'Show interactive menu system',
+  category: 'menu',
+  react: '🛸',
+  filename: __filename
 }, async (conn, mek, m, { from }) => {
+  try {
+    const userName = m.pushName || 'User';
+    const menuCaption = `
+╭━⪨ RAHEEM-XMD-3 ⪩━┈⊷🇹🇿
+├ Owner: ${config.OWNER_NAME}
+├ Type: NodeJs (MD)
+├ Mode: ${config.MODE}
+├ Prefix: ${config.PREFIX}
+├ Version: 2.0.0 Beta
+╰━ Hello ${userName}, choose a menu below:
+
+╭━⪨ 📜 MENU LIST ⪩━
+├ 1️⃣ Download Menu
+├ 2️⃣ Group Menu
+├ 3️⃣ Fun Menu
+├ 4️⃣ Owner Menu
+├ 5️⃣ AI Menu
+├ 6️⃣ Anime Menu
+├ 7️⃣ Convert Menu
+├ 8️⃣ Other Menu
+├ 9️⃣ Reactions Menu
+├ 🔟 Main Menu
+╰━━━━━━━━━━━━━━━━━━━
+
+> Reply with a number (1-10)
+    `;
+
+    const contextInfo = {
+      mentionedJid: [m.sender],
+      forwardingScore: 999,
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: '120363398101781980@newsletter',
+        newsletterName: 'RAHEEM CM',
+        serverMessageId: 143
+      }
+    };
+
+    // Send image (fallback to text if image fails)
+    const sendImage = async () => {
+      try {
+        return await conn.sendMessage(from, {
+          image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/a97zm1.jpg' },
+          caption: menuCaption,
+          contextInfo
+        }, { quoted: mek });
+      } catch {
+        return await conn.sendMessage(from, {
+          text: menuCaption,
+          contextInfo
+        }, { quoted: mek });
+      }
+    };
+
+    // Send voice message (PTT style)
+    const sendAudio = async () => {
+      try {
+        await new Promise(res => setTimeout(res, 1000));
+        await conn.sendMessage(from, {
+          audio: { url: 'https://files.catbox.moe/11f9pe.mp3' },
+          mimetype: 'audio/mp4',
+          ptt: true
+        }, { quoted: mek });
+      } catch {}
+    };
+
+    // Try to send both image and audio
+    let sentMsg;
     try {
-        const menuCaption = `
-╭──❖  ${config.BOT_NAME || '𝑹𝑨𝑯𝑬𝑬𝑴-𝑿𝑴𝑫-3'}  ❖──╮
-┃ 👑 Owner: ${config.OWNER_NAME}
-┃ 🛠️ Mode: ${config.MODE}
-┃ 🕒 Version: 2.0.0
-┃ 🧭 Time: ${config.TIME_NOW}
-┃ 🔖 Prefix: ${config.PREFIX}
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
-╭─❖ *🏠 MAIN COMMANDS* ❖─╮
-┃ ping
-┃ ping2
-┃ speed
-┃ live
-┃ alive
-┃ runtime
-┃ uptime
-┃ repo
-┃ owner
-┃ menu
-┃ menu2
-┃ restart
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
+      sentMsg = await Promise.race([
+        sendImage(),
+        new Promise((_, reject) => setTimeout(() => reject('Timeout'), 10000))
+      ]);
 
-╭─❖ *📥 DOWNLOAD MENU* ❖─╮
-┃ facebook
-┃ mediafire
-┃ tiktok
-┃ twitter
-┃ insta
-┃ apk
-┃ img
-┃ tt2
-┃ pins
-┃ apk2
-┃ fb2
-┃ pinterest
-┃ spotify
-┃ play
-┃ play2
-┃ audio
-┃ video
-┃ video2
-┃ ytmp3
-┃ ytmp4
-┃ song
-┃ darama
-┃ gdrive
-┃ ssweb
-┃ tiks
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-╭─❖ *👥 GROUP MENU* ❖─╮
-┃ grouplink
-┃ kickall
-┃ kickall2
-┃ kickall3
-┃ add
-┃ remove
-┃ kick
-┃ promote
-┃ demote
-┃ dismiss
-┃ revoke
-┃ setgoodbye
-┃ setwelcome
-┃ delete
-┃ getpic
-┃ ginfo
-┃ disappear on
-┃ disappear off
-┃ disappear 7D,24H
-┃ allreq
-┃ updategname
-┃ updategdesc
-┃ joinrequests
-┃ senddm
-┃ nikal
-┃ mute
-┃ unmute
-┃ lockgc
-┃ unlockgc
-┃ invite
-┃ tag
-┃ hidetag
-┃ tagall
-┃ tagadmins
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-╭─❖ *🎉 FUN MENU* ❖─╮
-┃ shapar
-┃ rate
-┃ insult
-┃ hack
-┃ ship
-┃ character
-┃ pickup
-┃ joke
-┃ hrt
-┃ hpy
-┃ syd
-┃ anger
-┃ shy
-┃ kiss
-┃ mon
-┃ cunfuzed
-┃ setpp
-┃ hand
-┃ nikal
-┃ hold
-┃ hug
-┃ hifi
-┃ poke
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-╭─❖ *👑 OWNER MENU* ❖─╮
-┃ owner
-┃ menu
-┃ menu2
-┃ vv
-┃ listcmd
-┃ allmenu
-┃ repo
-┃ block
-┃ unblock
-┃ fullpp
-┃ setpp
-┃ restart
-┃ shutdown
-┃ updatecmd
-┃ alive
-┃ ping
-┃ gjid
-┃ jid
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-╭─❖ *🤖 AI MENU* ❖─╮
-┃ ai
-┃ gpt3
-┃ gpt2
-┃ gptmini
-┃ gpt
-┃ meta
-┃ blackbox
-┃ luma
-┃ dj
-┃ khan
-┃ jawad
-┃ gpt4
-┃ bing
-┃ imagine
-┃ imagine2
-┃ copilot
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-╭─❖ *🖌️ ANIME MENU* ❖─╮
-┃ fack
-┃ truth
-┃ dare
-┃ dog
-┃ awoo
-┃ garl
-┃ waifu
-┃ neko
-┃ megnumin
-┃ maid
-┃ loli
-┃ animegirl
-┃ animegirl1
-┃ animegirl2
-┃ animegirl3
-┃ animegirl4
-┃ animegirl5
-┃ anime1
-┃ anime2
-┃ anime3
-┃ anime4
-┃ anime5
-┃ animenews
-┃ foxgirl
-┃ naruto
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-╭─❖ *🔄 CONVERT MENU* ❖─╮
-┃ sticker
-┃ sticker2
-┃ emojimix
-┃ fancy
-┃ take
-┃ tomp3
-┃ tts
-┃ trt
-┃ base64
-┃ unbase64
-┃ binary
-┃ dbinary
-┃ tinyurl
-┃ urldecode
-┃ urlencode
-┃ url
-┃ repeat
-┃ ask
-┃ readmore
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-╭─❖ *📌 OTHER MENU* ❖─╮
-┃ timenow
-┃ date
-┃ count
-┃ calculate
-┃ countx
-┃ flip
-┃ coinflip
-┃ rcolor
-┃ roll
-┃ fact
-┃ cpp
-┃ rw
-┃ pair
-┃ pair2
-┃ pair3
-┃ fancy
-┃ logo <text>
-┃ define
-┃ news
-┃ movie
-┃ weather
-┃ srepo
-┃ insult
-┃ save
-┃ wikipedia
-┃ gpass
-┃ githubstalk
-┃ yts
-┃ ytv
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-╭─❖ *💞 REACTIONS MENU* ❖─╮
-┃ bully
-┃ cuddle
-┃ cry
-┃ hug
-┃ awoo
-┃ kiss
-┃ lick
-┃ pat
-┃ smug
-┃ bonk
-┃ yeet
-┃ blush
-┃ smile
-┃ wave
-┃ highfive
-┃ handhold
-┃ nom
-┃ bite
-┃ glomp
-┃ slap
-┃ kill
-┃ happy
-┃ wink
-┃ poke
-┃ dance
-┃ cringe
-╰────────────────────────────╯ powerd by *sir Raheem-cm*
-
-_✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
-        `.trim();
-
-        const contextInfo = {
-            forwardingScore: 999,
-            isForwarded: true,
-            mentionedJid: [m.sender]
-        };
-
-        // Send menu image with caption
-        await conn.sendMessage(from, {
-            image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/aq881d.jpg' },
-            caption: menuCaption,
-            contextInfo
-        });
-
-        // Send background song after menu
-        await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/12hldr.mp3' },
-            mimetype: 'audio/mp4',
-            ptt: false, // true = voice note style
-            contextInfo
-        });
-
-    } catch (e) {
-        console.error(e);
-        await conn.sendMessage(from, { text: "❌ Error sending menu or audio." });
+      await Promise.race([
+        sendAudio(),
+        new Promise((_, reject) => setTimeout(() => reject('Audio Timeout'), 8000))
+      ]);
+    } catch {
+      sentMsg = await conn.sendMessage(from, {
+        text: menuCaption,
+        contextInfo
+      }, { quoted: mek });
     }
+
+    const messageID = sentMsg.key.id;
+
+    // Menu response map
+    const menuMap = {
+      '1': '*📥 Download Menu:*\nfacebook, mediafire, tiktok, insta, spotify, play, etc.',
+      '2': '*👥 Group Menu:*\nkick, add, promote, revoke, welcome, tagall, etc.',
+      '3': '*😄 Fun Menu:*\njoke, ship, pickup, insult, hand, hifi, etc.',
+      '4': '*👑 Owner Menu:*\nrestart, shutdown, block, unblock, listcmd, etc.',
+      '5': '*🤖 AI Menu:*\nai, gpt3, gpt4, imagine, luma, jawad, etc.',
+      '6': '*🎎 Anime Menu:*\nwaifu, neko, animegirl1-5, naruto, foxgirl, etc.',
+      '7': '*🔄 Convert Menu:*\nsticker, emojimix, tomp3, base64, urldecode, etc.',
+      '8': '*📌 Other Menu:*\ncalculate, wikipedia, githubstalk, yts, weather, etc.',
+      '9': '*💞 Reactions Menu:*\nhug, pat, kiss, bonk, smile, poke, etc.',
+      '10': '*🏠 Main Menu:*\nping, runtime, repo, alive, etc.'
+    };
+
+    // Handler for user replies
+    const replyHandler = async (msgData) => {
+      try {
+        const msg = msgData.messages[0];
+        const replyID = msg.message?.extendedTextMessage?.contextInfo?.stanzaId;
+        if (replyID !== messageID) return;
+
+        const text = msg.message?.conversation || msg.message?.extendedTextMessage?.text;
+        const selected = menuMap[text.trim()];
+
+        if (selected) {
+          await conn.sendMessage(from, {
+            text: selected,
+            contextInfo
+          }, { quoted: msg });
+
+          await conn.sendMessage(from, {
+            react: { text: '✅', key: msg.key }
+          });
+        } else {
+          await conn.sendMessage(from, {
+            text: '❌ Invalid input. Please reply with a number from 1 to 10.',
+            contextInfo
+          }, { quoted: msg });
+        }
+      } catch (e) {
+        console.error('Menu reply handler error:', e);
+      }
+    };
+
+    conn.ev.on('messages.upsert', replyHandler);
+    setTimeout(() => conn.ev.off('messages.upsert', replyHandler), 5 * 60 * 1000); // 5 min timeout
+
+  } catch (err) {
+    console.error('Menu2 command error:', err);
+    await conn.sendMessage(from, {
+      text: '⚠️ Menu currently unavailable. Try again later.'
+    }, { quoted: mek });
+  }
 });
