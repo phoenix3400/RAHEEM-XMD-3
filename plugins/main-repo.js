@@ -54,7 +54,14 @@ ${config.DESCRIPTION}
             image: { url: `https://files.catbox.moe/h3bao2.jpg` },
             caption: message,
             contextInfo: { 
-                mentionedJid: [m.sender],
+                     // Send background song after menu
+     await conn.sendMessage(from, {
+            audio: { url: 'https://files.catbox.moe/12hldr.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: false, // true = voice note style
+            contextInfo
+        });
+             mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
