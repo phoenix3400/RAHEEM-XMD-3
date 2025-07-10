@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const mime = require('mime-types'); // ← Add this
 const config = require('../config');
 const { cmd } = require('../command');
 
@@ -17,11 +18,12 @@ async (conn, mek, m, { from, body }) => {
 
                 if (fs.existsSync(audioPath)) {
                     const audioBuffer = fs.readFileSync(audioPath);
+                    const mimeType = mime.lookup(audioPath) || 'audio/mp4'; // auto-detect mime
 
                     await conn.sendMessage(from, {
                         audio: audioBuffer,
-                        mimetype: 'audio/mp4', // Change if you're using ogg, wav, etc.
-                        ptt: true // true for voice note, false for normal audio
+                        mimetype: mimeType,
+                        ptt: true // Set false if you want it as a regular audio
                     }, { quoted: mek });
                 } else {
                     console.warn(`Audio not found: ${audioPath}`);
