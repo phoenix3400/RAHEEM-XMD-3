@@ -1,4 +1,4 @@
-const config = require('../config');
+ const config = require('../config');
 const { cmd } = require('../command');
 
 cmd({
@@ -14,11 +14,10 @@ cmd({
 ┃ 👑 Owner: ${config.OWNER_NAME}
 ┃ 🛠️ Mode: ${config.MODE}
 ┃ 🕒 Version: 2.0.0
-| 🧭 Time: ${config.TIME_NOW}
+┃ 🧭 Time: ${config.Time}
 ┃ 🔖 Prefix: ${config.PREFIX}
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
          
-
 ╭─❖ *🏠 MAIN COMMANDS* ❖─╮
 ┃ ping
 ┃ ping2
@@ -33,7 +32,6 @@ cmd({
 ┃ menu2
 ┃ restart
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *📥 DOWNLOAD MENU* ❖─╮
 ┃ facebook
@@ -62,7 +60,6 @@ cmd({
 ┃ ssweb
 ┃ tiks
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *👥 GROUP MENU* ❖─╮
 ┃ grouplink
@@ -100,7 +97,6 @@ cmd({
 ┃ tagall
 ┃ tagadmins
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *🎉 FUN MENU* ❖─╮
 ┃ shapar
@@ -127,7 +123,6 @@ cmd({
 ┃ hifi
 ┃ poke
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *👑 OWNER MENU* ❖─╮
 ┃ owner
@@ -149,7 +144,6 @@ cmd({
 ┃ gjid
 ┃ jid
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *🤖 AI MENU* ❖─╮
 ┃ ai
@@ -169,7 +163,6 @@ cmd({
 ┃ imagine2
 ┃ copilot
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *🖌️ ANIME MENU* ❖─╮
 ┃ fack
@@ -198,7 +191,6 @@ cmd({
 ┃ foxgirl
 ┃ naruto
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *🔄 CONVERT MENU* ❖─╮
 ┃ sticker
@@ -221,7 +213,6 @@ cmd({
 ┃ ask
 ┃ readmore
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *📌 OTHER MENU* ❖─╮
 ┃ timenow
@@ -254,7 +245,6 @@ cmd({
 ┃ yts
 ┃ ytv
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
 
 ╭─❖ *💞 REACTIONS MENU* ❖─╮
 ┃ bully
@@ -284,41 +274,33 @@ cmd({
 ┃ dance
 ┃ cringe
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
-         
+
 _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
         `.trim();
 
-        const contextInfo = { mentionedJid: [m.sender] };
-
-        // Send the menu image (optional)
-        const sendMenuImage = async () => {
-            try {
-                return await conn.sendMessage(
-                    from,
-                    {
-                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/aq881d.jpg' },
-                        caption: menuCaption,
-                        contextInfo
-                    },
-                    { quoted: mek }
-                );
-            } catch {
-                return await conn.sendMessage(
-                    from,
-                    { text: menuCaption, contextInfo },
-                    { quoted: mek }
-                );
-            }
+        const contextInfo = {
+            forwardingScore: 999,
+            isForwarded: true,
+            mentionedJid: [m.sender]
         };
 
-        await sendMenuImage();
+        // Send menu image with caption
+        await conn.sendMessage(from, {
+            image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/aq881d.jpg' },
+            caption: menuCaption,
+            contextInfo
+        });
+
+        // Send background song after menu
+        await conn.sendMessage(from, {
+            audio: { url: 'https://files.catbox.moe/8z2zzy.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: false, // true = voice note style
+            contextInfo
+        });
+
     } catch (e) {
-        try {
-            await conn.sendMessage(
-                from,
-                { text: `❌ Menu system iko busy. Jaribu tena baadae.` },
-                { quoted: mek }
-            );
-        } catch {}
+        console.error(e);
+        await conn.sendMessage(from, { text: "❌ Error sending menu or audio." });
     }
 });
