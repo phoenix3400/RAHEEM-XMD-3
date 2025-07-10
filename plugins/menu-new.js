@@ -296,7 +296,7 @@ _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/aq881d.jpg' },
+                        video: { url: config.MENU_VIDEO_URL || 'https://files.catbox.moe/skv4x7.mp4' },
                         caption: menuCaption,
                         contextInfo
                     },
