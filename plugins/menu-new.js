@@ -14,7 +14,7 @@ cmd({
 ┃ 👑 Owner: ${config.OWNER_NAME}
 ┃ 🛠️ Mode: ${config.MODE}
 ┃ 🕒 Version: 2.0.0
-┃ 🧭 Time: ${time}
+┃ 🧭 Time: ${config.Time}
 ┃ 🔖 Prefix: ${config.PREFIX}
 ╰────────────────────────────╯ powerd by *sir Raheem-cm*
          
