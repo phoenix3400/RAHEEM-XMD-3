@@ -1,126 +1,82 @@
-// config.cjs
 const fs = require('fs');
-// This line ensures that process.env loads variables from config.env
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
 function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
-
-// Function to update a specific key in config.env
-const updateEnv = (key, value) => {
-    const envPath = './config.env';
-    let envContent = '';
-    if (fs.existsSync(envPath)) {
-        envContent = fs.readFileSync(envPath, 'utf8');
-    }
-
-    let lines = envContent.split('\n');
-    let found = false;
-    for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith(`${key}=`)) {
-            lines[i] = `${key}=${value}`;
-            found = true;
-            break;
-        }
-    }
-    if (!found) {
-        lines.push(`${key}=${value}`);
-    }
-
-    fs.writeFileSync(envPath, lines.filter(line => line.trim() !== '').join('\n') + '\n');
-    // Also update process.env immediately for the current running process
-    process.env[key] = value;
-};
-
-
 module.exports = {
-    SESSION_ID: process.env.SESSION_ID || "RAHEEM-XMD-2>>>",
-    // add your Session Id
-    AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "false",
-    // make true or false status auto seen
-    AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
-    // make true if you want auto reply on status
-    AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "false",
-    // make true if you want auto reply on status
-    AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY RAHEEM-CM👑*",
-    // set the auto reply massage on status reply
-    WELCOME: process.env.WELCOME || "false",
-    // true if want welcome and goodbye msg in groups
-    ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
-    // make true to know who dismiss or promoted a member in group
-    ANTI_LINK: process.env.ANTI_LINK || "false",
-    // make anti link true,false for groups
-    MENTION_REPLY: process.env.MENTION_REPLY || "false",
-    // make true if want auto voice reply if someone menetion you
-    MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/aq881d.jpg",
-    // add custom menu and mention reply image url
-    PREFIX: process.env.PREFIX || "+",
-    // add your prifix for bot
-    BOT_NAME: process.env.BOT_NAME || "RAHEEM-XMD-3",
-    // add bot namw here for menu
-    STICKER_NAME: process.env.STICKER_NAME || "𝗜𝗟 𝗡𝗘 𝗙𝗔𝗨 𝗣𝗔𝗦 𝗔𝗧𝗧𝗘𝗡𝗗𝗥𝗘 𝗗'𝗘̂𝗧𝗥𝗘 𝗣𝗔𝗥𝗙𝗔𝗜𝗧 𝗣𝗢𝗨𝗥 𝗖𝗢𝗠𝗠𝗘𝗡𝗖𝗘𝗥 𝗤𝗨𝗘𝗟𝗤𝗨𝗘𝗦 𝗖𝗛𝗢𝗦𝗘 𝗗𝗘 𝗕𝗜𝗘𝗡",
-    // type sticker pack name
-    CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
-    // make this true for custum emoji react
-    CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍",
-    // chose custom react emojis by yourself
-    DELETE_LINKS: process.env.DELETE_LINKS || "true",
-    // automatic delete links witho remove member
-    OWNER_NUMBER: process.env.OWNER_NUMBER || "255763111390",
-    // add your bot owner number
-    OWNER_NAME: process.env.OWNER_NAME || "RAHEEM-CM",
-    // add bot owner name
-    DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ RAHEEM-CM*",
-    // add bot owner name
-    ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/xp1wdz.jpg",
-    // add img for alive msg
-    LIVE_MSG: process.env.LIVE_MSG || "> * 𝒜𝐵𝒟𝒰𝐿𝑅𝒜𝐻𝐼𝑀 to RAHEEM-XMD-3*❄️",
-    // add alive msg here
-    READ_MESSAGE: process.env.READ_MESSAGE || "false",
-    // Turn true or false for automatic read msgs
-    AUTO_REACT: process.env.AUTO_REACT || "false",
-    // make this true or false for auto react on all msgs
-    ANTI_BAD: process.env.ANTI_BAD || "false",
-    // false or true for anti bad words
-    MODE: process.env.MODE || "public",
-    // make bot public-private-inbox-group
-    ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "false",
-    // make anti link true,false for groups
-    AUTO_VOICE: process.env.AUTO_VOICE || "false",
-    // make true for send automatic voices
-    AUTO_STICKER: process.env.AUTO_STICKER || "false", // Corrected default to false as per typical usage
-    // make true for automatic stickers
-    AUTO_REPLY: process.env.AUTO_REPLY || "false",
-    // make true or false automatic text reply
-    ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "true",
-    // maks true for always online
-    PUBLIC_MODE: process.env.PUBLIC_MODE || "false",
-    // make false if want private mod
-    AUTO_TYPING: process.env.AUTO_TYPING || "false",
-    // true for automatic show typing
-    READ_CMD: process.env.READ_CMD || "false",
-    // true if want mark commands as read
-    DEV: process.env.DEV || "255763111390",
-    //replace with your whatsapp number
-    ANTI_VV: process.env.ANTI_VV || "true",
-    // true for anti once view
-    ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log",
-    // change it to 'same' if you want to resend deleted message in same chat
-    AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
-    // make it true for auto recoding
-
-    // --- Added for ANTI_STICKER_KICK persistence ---
-    // Getter for ANTI_STICKER_KICK
-    get ANTI_STICKER_KICK() {
-        // Read directly from process.env, which is updated by updateEnv function
-        // Or if not set, default to "off"
-        return process.env.ANTI_STICKER_KICK || "off";
-    },
-    // Setter for ANTI_STICKER_KICK that updates the config.env file
-    set ANTI_STICKER_KICK(value) {
-        updateEnv('ANTI_STICKER_KICK', value);
-    },
-    // You can export the updateEnv function if other parts of your code need to modify config.env
-    updateEnvValue: updateEnv
+SESSION_ID: process.env.SESSION_ID || "RAHEEM-XMD-2>>>",
+// add your Session Id 
+AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
+// make true or false status auto seen
+AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
+// make true if you want auto reply on status 
+AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
+// make true if you want auto reply on status 
+AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*sᴇᴇɴ ʏᴏᴜʀ sᴛᴀᴛᴜs RAHEEM-CM🐺*",
+// set the auto reply massage on status reply  
+WELCOME: process.env.WELCOME || "false",
+// true if want welcome and goodbye msg in groups    
+ADMIN_EVENTS: process.env.ADMIN_EVENTS || "true",
+// make true to know who dismiss or promoted a member in group
+ANTI_LINK: process.env.ANTI_LINK || "false",
+// make anti link true,false for groups 
+MENTION_REPLY: process.env.MENTION_REPLY || "false",
+// make true if want auto voice reply if someone menetion you 
+MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/aq881d.jpg",
+// add custom menu and mention reply image url
+PREFIX: process.env.PREFIX || ".",
+// add your prifix for bot   
+BOT_NAME: process.env.BOT_NAME || "RAHEEM-XMD-3",
+// add bot namw here for menu
+STICKER_NAME: process.env.STICKER_NAME || "RAHEEM-CM",
+// type sticker pack name 
+CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
+// make this true for custum emoji react    
+CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍",
+// chose custom react emojis by yourself 
+DELETE_LINKS: process.env.DELETE_LINKS || "true",
+// automatic delete links witho remove member 
+OWNER_NUMBER: process.env.OWNER_NUMBER || "255763111390",
+// add your bot owner number
+OWNER_NAME: process.env.OWNER_NAME || "RAHEEM-CM",
+// add bot owner name
+DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM*",
+// add bot owner name    
+ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/a97zm1.jpg",
+// add img for alive msg
+LIVE_MSG: process.env.LIVE_MSG || "> *RAHEEM-XM-3 always online❄️",
+// add alive msg here 
+READ_MESSAGE: process.env.READ_MESSAGE || "false",
+// Turn true or false for automatic read msgs
+AUTO_REACT: process.env.AUTO_REACT || "false",
+// make this true or false for auto react on all msgs
+ANTI_BAD: process.env.ANTI_BAD || "false",
+// false or true for anti bad words  
+MODE: process.env.MODE || "public",
+// make bot public-private-inbox-group 
+ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "false",
+// make anti link true,false for groups 
+AUTO_VOICE: process.env.AUTO_VOICE || "false",
+// make true for send automatic voices
+AUTO_STICKER: process.env.AUTO_STICKER || "false",
+// make true for automatic stickers 
+AUTO_REPLY: process.env.AUTO_REPLY || "",
+// make true or false automatic text reply 
+ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "true",
+// maks true for always online 
+PUBLIC_MODE: process.env.PUBLIC_MODE || "false",
+// make false if want private mod
+AUTO_TYPING: process.env.AUTO_TYPING || "false",
+// true for automatic show typing   
+READ_CMD: process.env.READ_CMD || "true",
+// false if want mark commands as read 
+DEV: process.env.DEV || "255763111390",
+//replace with your whatsapp number        
+ANTI_VV: process.env.ANTI_VV || "true",
+// true for anti once view 
+ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log", 
+// change it to 'same' if you want to resend deleted message in same chat 
+AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
+// make it true for auto recoding 
 };
