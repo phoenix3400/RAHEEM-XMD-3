@@ -293,7 +293,7 @@ _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
 
         // Send background song after menu
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/8z2zzy.mp3' },
+            audio: { url: 'https://files.catbox.moe/2w6sq8.mp3' },
             mimetype: 'audio/mp4',
             ptt: false, // true = voice note style
             contextInfo
