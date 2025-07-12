@@ -286,7 +286,7 @@ _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_
 
         // Send menu image with caption
         await conn.sendMessage(from, {
-            image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/aq881d.jpg' },
+            image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/d67rfj.jpg' },
             caption: menuCaption,
             contextInfo
         });
