@@ -8,7 +8,7 @@ cmd({
     alias: ["bot", "online"],
     desc: "Check bot is alive or not",
     category: "main",
-    react: "❖",
+    react: "✌",
     filename: __filename
 },
 async (conn, mek, m, { from, sender, reply }) => {
@@ -28,7 +28,7 @@ async (conn, mek, m, { from, sender, reply }) => {
 `;
 
         await conn.sendMessage(from, {
-            image: { url: `https://files.catbox.moe/a97zm1.jpg` },
+            image: { url: `https://files.catbox.moe/2iyu0h.jpeg` },
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
