@@ -92,7 +92,7 @@
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "255XXXXXX"
+      "value": "255763111390"
 
     }, 
 
@@ -132,7 +132,7 @@
     "MENU_IMAGE_URL": {
       "description": "add url for mention reply and menu if want.",
       "required": false,
-      "value": "https://files.catbox.moe/es6xwn.jpg"
+      "value": "https://files.catbox.moe/9gl0l8.jpg"
     },
     
      "DESCRIPTION": {
