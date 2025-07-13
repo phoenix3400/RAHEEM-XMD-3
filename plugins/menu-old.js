@@ -785,8 +785,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• blackbox
 ┃◈┃• luma
 ┃◈┃• dj 
-┃◈┃• khan
-┃◈┃• jawad
+┃◈┃• raheem-cm
+┃◈┃• raheem
 ┃◈┃• gpt4
 ┃◈┃• bing
 ┃◈┃• imagine 
