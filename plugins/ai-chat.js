@@ -2,11 +2,11 @@ const { cmd } = require('../command');
 const axios = require('axios');
 
 cmd({
-    pattern: "ai",
+    pattern: "raheem",
     alias: ["bot", "dj", "gpt", "gpt4", "bing"],
     desc: "Chat with an AI model",
     category: "ai",
-    react: "🤖",
+    react: "🤔",
     filename: __filename
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
@@ -21,7 +21,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
             return reply("AI failed to respond. Please try again later.");
         }
 
-        await reply(`🤖 *AI Response:*\n\n${data.message}`);
+        await reply(`🤖 *Raheem Response:*\n\n${data.message}`);
         await react("✅");
     } catch (e) {
         console.error("Error in AI command:", e);
