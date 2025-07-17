@@ -17,7 +17,7 @@ cmd({
 ┃ 👑 Owner: ${config.OWNER_NAME}
 ┃ 🛠️ Mode: ${config.MODE}
 ┃ 🕒 Version: 2.0.0
-┃ ⏰𝐓𝐈𝐌𝐄: *${config.timestamp}*
+┃ ⏰𝐓𝐈𝐌𝐄: *${config.timeszone}*
 ┃ 🔖 Prefix: ${config.PREFIX}
 ╰────────────────────────────╯
 
