@@ -11,7 +11,7 @@ cmd({
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
     try {
-        if (!q) return reply("Please provide a message for the AI.\nExample: `.ai Hello`");
+        if (!q) return reply("Please provide a message for the AI.\nExample: `.raheem Hello`");
 
         const apiUrl = `https://lance-frank-asta.onrender.com/api/gpt?q=${encodeURIComponent(q)}`;
         const { data } = await axios.get(apiUrl);
@@ -21,7 +21,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
             return reply("AI failed to respond. Please try again later.");
         }
 
-        await reply(`🤖 *Raheem Response:*\n\n${data.message}`);
+        await reply(`🤤 *Raheem Response:*\n\n${data.message}`);
         await react("✅");
     } catch (e) {
         console.error("Error in AI command:", e);
