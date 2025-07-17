@@ -71,7 +71,7 @@ cmd({
 ┃ 👤 *USER*: @${sender.split('@')[0]}
 ┃ 🔢 *WARNING COUNT*: *${warningCount}*
 ┃ 🚫 *REASON*: SENDING LINKS
-┃ ⏳ *WARNING LIMIT*: *3*
+┃ ⏳ *WARNING LIMIT*: *1*
 ╰─────────────⦿⦿⦿─────────────╯
 *If you reach 3 warnings you will be removed from the group!*
 _Powered by RAHEEM-CM_`,
