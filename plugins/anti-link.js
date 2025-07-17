@@ -73,7 +73,7 @@ cmd({
 ┃ 🚫 *REASON*: SENDING LINKS
 ┃ ⏳ *WARNING LIMIT*: *1*
 ╰─────────────⦿⦿⦿─────────────╯
-*If you reach 3 warnings you will be removed from the group!*
+*If you reach 1 warnings you will be removed from the group!*
 _Powered by RAHEEM-CM_`,
           mentions: [sender]
         });
