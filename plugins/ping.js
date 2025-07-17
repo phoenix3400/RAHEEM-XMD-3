@@ -1,8 +1,9 @@
 const config = require('../config');
 const { cmd } = require('../command');
 
-const CHANNEL_NAME = "RAHEEM BOTS 🤟✌";
-const CHANNEL_LINK = "https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r"; // Badilisha hii na link ya channel yako halisi
+const CHANNEL_NAME = "RAHEEM CM WHATSAPP CHANNEL";
+const CHANNEL_ID = "120363398101781980@newsletter";
+const CHANNEL_LINK = `https://whatsapp.com/channel/${CHANNEL_ID}`;
 const MUSIC_URL = "https://files.catbox.moe/n281ow.mp3"; // Badilisha mp3 url kama unataka
 
 cmd({
@@ -41,7 +42,7 @@ cmd({
 ┗━━━━━━━━━━━━━━━━━━━━━━┛
 > ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM
 
-📢 *Subscribe / Join Channel:*
+📢 *Join our WhatsApp Channel:*
 ${CHANNEL_NAME}
 ${CHANNEL_LINK}`,
 
@@ -51,10 +52,10 @@ ${CHANNEL_LINK}`,
 ╰─────────────⪨⚡⪩───────╯
 > ʙʏ *RAHEEM-CM*
 
-🔔 _Usikose updates, join channel:_
+🔔 _Usikose updates, join WHATSAPP Channel:_
 ${CHANNEL_LINK}`,
 
-`━━━[ *PING* ]━━━
+`━━━[ *PING3* ]━━━
 ${emoji2} Bot: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
 ⏰ Ping: *${latency}ms*
 👑 Owner: *${config.OWNER_NAME}*
@@ -70,7 +71,7 @@ Status: *ONLINE* ${emoji1}
 Ping: *${latency}ms*
 ${emoji2} Powered by RAHEEM-CM
 
-📣 Channel yetu:
+📣 WhatsApp Channel:
 ${CHANNEL_LINK}`,
 
 `⧉ *ULTRA SPEED TEST* ⧉
@@ -79,7 +80,7 @@ ${emoji2} Latency: *${latency} ms*
 🛡️ By: *${config.OWNER_NAME}*
 ➤ *All Systems Nominal*
 
-🔗 *Channel:*
+🔗 *WhatsApp Channel:*
 ${CHANNEL_NAME}
 ${CHANNEL_LINK}`
         ];
