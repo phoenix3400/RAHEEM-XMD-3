@@ -3,7 +3,7 @@ const { cmd } = require('../command');
 
 cmd({
     pattern: "menu",
-    desc: "Show full main menu (vertical stylish box)",
+    desc: "Show full main menu (vertical stylish cycle)",
     category: "menu",
     react: "📜",
     filename: __filename
