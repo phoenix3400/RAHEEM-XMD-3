@@ -50,63 +50,9 @@ async (conn, mek, m, { from, reply }) => {
 ${config.DESCRIPTION}
         `.trim();
 
-        const style2 = `
-┏━━━━━[ GITHUB REPO INFO ]━━━━━┓
-┃ 🏷️  *${repoData.name}*
-┃ 👤 By: *${repoData.owner.login}*
-┃ ✨ Stars: *${repoData.stargazers_count}*   🍴 Forks: *${repoData.forks_count}*
-┃ 🔗 ${repoData.html_url}
-┃ 📝 ${repoData.description || 'No Description'}
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        // ... outros styles omitidos para brevidade ...
 
-${config.DESCRIPTION}
-        `.trim();
-
-        const style3 = `
-▄▀▄▀▄ REPO INFO ▄▀▄▀▄
-
-♢ *Project*: ${repoData.name}
-♢ *Author*: ${repoData.owner.login}
-♢ *Stars*: ${repoData.stargazers_count} ✨
-♢ *Forks*: ${repoData.forks_count} 🍴
-♢ *Updated*: ${new Date(repoData.updated_at).toLocaleDateString()}
-
-🔗 ${repoData.html_url}
-
-${repoData.description || 'No Description'}
-
-${config.DESCRIPTION}
-        `.trim();
-
-        const style4 = `
-╔═════『 *RAHEEM-XMD* 』═════╗
-║ • Name: ${repoData.name}
-║ • Owner: ${repoData.owner.login}
-║ • Stars: ${repoData.stargazers_count}
-║ • Forks: ${repoData.forks_count}
-║ • URL: ${repoData.html_url}
-║ • Desc: ${repoData.description || 'None'}
-╚═══════════════════════════╝
-
-${config.DESCRIPTION}
-        `.trim();
-
-        const style5 = `
-✦ *RAHEEM-XMD Repository* ✦
-
-📌 *${repoData.name}*
-👤 @${repoData.owner.login}
-⭐ ${repoData.stargazers_count} Stars | 🍴 ${repoData.forks_count} Forks
-🔗 GitHub: ${repoData.html_url}
-
-${repoData.description || 'No Description available'}
-
-${config.DESCRIPTION}
-        `.trim();
-
-        // Add more styles if you wish!
-
-        const styles = [style1, style2, style3, style4, style5];
+        const styles = [style1 /*, style2, style3, style4, style5 */];
         const selectedStyle = styles[Math.floor(Math.random() * styles.length)];
 
         await conn.sendMessage(from, {
@@ -122,6 +68,17 @@ ${config.DESCRIPTION}
                     serverMessageId: 143
                 }
             }
+        }, { quoted: mek });
+
+        // --- MUSIC SECTION ---
+        // Exemplo: envie um áudio ao usuário, depois da resposta do repo.
+        // Troque a URL abaixo por um link válido de um arquivo de áudio MP3, etc.
+        const musicUrl = 'https://files.catbox.moe/bhj66x.m4a'; // Substitua pela sua música
+        await conn.sendMessage(from, {
+            audio: { url: musicUrl },
+            mimetype: 'audio/mp4',
+            ptt: false,
+            caption: 'Enjoy the music! 🎵'
         }, { quoted: mek });
 
     } catch (error) {
