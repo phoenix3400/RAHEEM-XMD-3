@@ -1,9 +1,13 @@
 const config = require('../config');
 const { cmd } = require('../command');
 
+const CHANNEL_NAME = "RAHEEM BOTS 🤟✌";
+const CHANNEL_LINK = "https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r"; // Badilisha hii na link ya channel yako halisi
+const MUSIC_URL = "https://files.catbox.moe/n281ow.mp3"; // Badilisha mp3 url kama unataka
+
 cmd({
-    pattern: "ping3",
-    alias: ["speed3", "pong3"],
+    pattern: "ping",
+    alias: ["speed", "pong"],
     desc: "Check bot's response time in super style.",
     category: "main",
     react: "🚀",
@@ -12,57 +16,77 @@ cmd({
     try {
         const start = Date.now();
 
+        // Emojis
         const pingEmojis = ['🦾', '🦿', '⚡', '🚀', '🛸', '🤖', '🟢', '🔵', '💻', '⏳'];
         const pickEmoji = () => pingEmojis[Math.floor(Math.random() * pingEmojis.length)];
-        const emoji1 = pickEmoji(), emoji2 = pickEmoji();
+        let emoji1 = pickEmoji(), emoji2 = pickEmoji();
+        while (emoji2 === emoji1) emoji2 = pickEmoji();
 
         // Send quick reaction
         await conn.sendMessage(from, {
             react: { text: emoji1, key: mek.key }
         });
 
-        // Artificial small delay for realistic ping (optional)
+        // Small delay for more realistic latency
         await new Promise(res => setTimeout(res, 100 + Math.random() * 200));
 
         const latency = Date.now() - start;
 
-        // Random stylish formats
+        // Stylish responses
         const styles = [
 `┏━━━━━━━❖ PING ❖━━━━━━━┓
 ┃ 🤖 Bot: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
 ┃ ${emoji2} Latency: *${latency}ms*
 ┃ 🛡️ Owner: *${config.OWNER_NAME}*
 ┗━━━━━━━━━━━━━━━━━━━━━━┛
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM`,
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM
+
+📢 *Subscribe / Join Channel:*
+${CHANNEL_NAME}
+${CHANNEL_LINK}`,
 
 `╭───⪨ *SPEED CHECK* ⪩───╮
 ┃ ${emoji1} BOT: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
 ┃ ${emoji2} SPEED: *${latency} ms*
 ╰─────────────⪨⚡⪩───────╯
-> ʙʏ *RAHEEM-CM*`,
+> ʙʏ *RAHEEM-CM*
 
-`━━━[ *PING3* ]━━━
+🔔 _Usikose updates, join channel:_
+${CHANNEL_LINK}`,
+
+`━━━[ *PING* ]━━━
 ${emoji2} Bot: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
 ⏰ Ping: *${latency}ms*
 👑 Owner: *${config.OWNER_NAME}*
 ━━━━━━━━━━━━━━
-> RAHEEM-CM`,
+> RAHEEM-CM
+
+🎬 *Join/Subscribe:*
+${CHANNEL_NAME}
+${CHANNEL_LINK}`,
 
 `『 *RAHEEM-XMD-3* 』
 Status: *ONLINE* ${emoji1}
 Ping: *${latency}ms*
-${emoji2} Powered by RAHEEM-CM`,
+${emoji2} Powered by RAHEEM-CM
+
+📣 Channel yetu:
+${CHANNEL_LINK}`,
 
 `⧉ *ULTRA SPEED TEST* ⧉
 ${emoji1} Bot: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
 ${emoji2} Latency: *${latency} ms* 
 🛡️ By: *${config.OWNER_NAME}*
-➤ *All Systems Nominal*`
+➤ *All Systems Nominal*
+
+🔗 *Channel:*
+${CHANNEL_NAME}
+${CHANNEL_LINK}`
         ];
 
-        // Chagua style random
         const text = styles[Math.floor(Math.random() * styles.length)];
 
+        // Send ping message
         await conn.sendMessage(from, {
             text,
             contextInfo: {
@@ -70,6 +94,13 @@ ${emoji2} Latency: *${latency} ms*
                 forwardingScore: 999,
                 isForwarded: true
             }
+        }, { quoted: mek });
+
+        // Send music (audio)
+        await conn.sendMessage(from, {
+            audio: { url: MUSIC_URL },
+            mimetype: 'audio/mp4',
+            ptt: false
         }, { quoted: mek });
 
     } catch (e) {
