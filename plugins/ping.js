@@ -1,85 +1,79 @@
 const config = require('../config');
-const { cmd, commands } = require('../command');
+const { cmd } = require('../command');
 
 cmd({
-    pattern: "ping",
-    alias: ["speed","pong"],use: '.ping',
-    desc: "Check bot's response time.",
+    pattern: "ping3",
+    alias: ["speed3", "pong3"],
+    desc: "Check bot's response time in super style.",
     category: "main",
-    react: "🍁",
+    react: "🚀",
     filename: __filename
-},
-async (conn, mek, m, { from, quoted, sender, reply }) => {
+}, async (conn, mek, m, { from, sender }) => {
     try {
-        const start = new Date().getTime();
+        const start = Date.now();
 
-        const reactionEmojis = ['🔥', '⚡', '⏰', '💨', '🎯', '🎉', '👿', '💥', '🕐', '🤖'];
-        const textEmojis = ['⏰', '🏆', '🛸', '🚀', '🎶', '🪀', '💞', '🔱', '🛡️', '❣️'];
+        const pingEmojis = ['🦾', '🦿', '⚡', '🚀', '🛸', '🤖', '🟢', '🔵', '💻', '⏳'];
+        const pickEmoji = () => pingEmojis[Math.floor(Math.random() * pingEmojis.length)];
+        const emoji1 = pickEmoji(), emoji2 = pickEmoji();
 
-        const reactionEmoji = reactionEmojis[Math.floor(Math.random() * reactionEmojis.length)];
-        let textEmoji = textEmojis[Math.floor(Math.random() * textEmojis.length)];
-
-        // Ensure reaction and text emojis are different
-        while (textEmoji === reactionEmoji) {
-            textEmoji = textEmojis[Math.floor(Math.random() * textEmojis.length)];
-        }
-
-        // Send reaction using conn.sendMessage()
+        // Send quick reaction
         await conn.sendMessage(from, {
-            react: { text: textEmoji, key: mek.key }
+            react: { text: emoji1, key: mek.key }
         });
 
-        const end = new Date().getTime();
-        const responseTime = (end - start) / 1000;
+        // Artificial small delay for realistic ping (optional)
+        await new Promise(res => setTimeout(res, 100 + Math.random() * 200));
 
-        const text = `╭━━━━─❖𝐏𝐈𝐍𝐆 𝐓𝐄𝐒𝐓❖─━━━━╮
-┃📡𝐁𝐎𝐓: *RAHEEM-XMD-3*
-┃🌟𝐏𝐈𝐍𝐆: *${responseTime.toFixed(2)}MS ${reactionEmoji}*
-╰━━━━━━⦉𝒜𝐵𝒟𝒰𝐿𝑅𝒜𝐻𝐼𝑀⦊━━━━━━╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM* 💙`;
+        const latency = Date.now() - start;
+
+        // Random stylish formats
+        const styles = [
+`┏━━━━━━━❖ PING ❖━━━━━━━┓
+┃ 🤖 Bot: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
+┃ ${emoji2} Latency: *${latency}ms*
+┃ 🛡️ Owner: *${config.OWNER_NAME}*
+┗━━━━━━━━━━━━━━━━━━━━━━┛
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM-CM`,
+
+`╭───⪨ *SPEED CHECK* ⪩───╮
+┃ ${emoji1} BOT: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
+┃ ${emoji2} SPEED: *${latency} ms*
+╰─────────────⪨⚡⪩───────╯
+> ʙʏ *RAHEEM-CM*`,
+
+`━━━[ *PING3* ]━━━
+${emoji2} Bot: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
+⏰ Ping: *${latency}ms*
+👑 Owner: *${config.OWNER_NAME}*
+━━━━━━━━━━━━━━
+> RAHEEM-CM`,
+
+`『 *RAHEEM-XMD-3* 』
+Status: *ONLINE* ${emoji1}
+Ping: *${latency}ms*
+${emoji2} Powered by RAHEEM-CM`,
+
+`⧉ *ULTRA SPEED TEST* ⧉
+${emoji1} Bot: *${config.BOT_NAME || "RAHEEM-XMD-3"}*
+${emoji2} Latency: *${latency} ms* 
+🛡️ By: *${config.OWNER_NAME}*
+➤ *All Systems Nominal*`
+        ];
+
+        // Chagua style random
+        const text = styles[Math.floor(Math.random() * styles.length)];
 
         await conn.sendMessage(from, {
             text,
             contextInfo: {
                 mentionedJid: [sender],
                 forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363399470975987@newsletter',
-                    newsletterName: "RAHEEM-XMD-3",
-                    serverMessageId: 143
-                }
+                isForwarded: true
             }
         }, { quoted: mek });
 
     } catch (e) {
-        console.error("Error in ping command:", e);
-        reply(`An error occurred: ${e.message}`);
+        console.error("Error in ping3 command:", e);
+        await conn.sendMessage(from, { text: `Ping3 error: ${e.message}` }, { quoted: mek });
     }
 });
-
-// ping2 
-
-cmd({
-    pattern: "ping2",
-    desc: "Check bot's response time.",
-    category: "main",
-    react: "📡",
-    filename: __filename
-},
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-        const startTime = Date.now()
-        const message = await conn.sendMessage(from, { text: '*PINGING...⏳*' })
-        const endTime = Date.now()
-        const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `╭━━〔 *🛸 SPEED2 TEST* 〕━━╮
-┃ 🤖 *BOT* : *RAHEEM-XMD-3*
-┃ ⏳ *PING* : *${ping}MS*
-╰━━━━━━━━━━━━━━━━━━━━╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM* 💙` }, { quoted: message })
-    } catch (e) {
-        console.log(e)
-        reply(`${e}`)
-    }
-})
