@@ -10,16 +10,16 @@ cmd({
     if (!m.mentionedJid || m.mentionedJid.length === 0) return;
 
     const voiceClips = [
-      "https://cdn.ironman.my.id/i/7p5plg.mp4",
-      "https://cdn.ironman.my.id/i/l4dyvg.mp4",
-      "https://cdn.ironman.my.id/i/4z93dg.mp4",
-      "https://cdn.ironman.my.id/i/m9gwk0.mp4",
-      "https://cdn.ironman.my.id/i/gr1jjc.mp4",
-      "https://cdn.ironman.my.id/i/lbr8of.mp4",
-      "https://cdn.ironman.my.id/i/0z95mz.mp4",
-      "https://cdn.ironman.my.id/i/rldpwy.mp4",
-      "https://cdn.ironman.my.id/i/lz2z87.mp4",
-      "https://cdn.ironman.my.id/i/gg5jct.mp4"
+      "https://files.catbox.moe/1uc1ha.mp3",
+      "https://files.catbox.moe/0zy37y.mp3",
+      "https://files.catbox.moe/juudad.mp3",
+      "https://files.catbox.moe/q0o69p.mp3",
+      "https://files.catbox.moe/je07wf.mp3",
+      "https://files.catbox.moe/5cpr03.mp3",
+      "https://files.catbox.moe/e56yzo.mp3",
+      "https://files.catbox.moe/bn1zm3.mp3",
+      "https://files.catbox.moe/dmai20.mp3",
+      "https://files.catbox.moe/vc27e7.mp3"
     ];
 
     const randomClip = voiceClips[Math.floor(Math.random() * voiceClips.length)];
