@@ -64,22 +64,23 @@ cmd({
 
       // Handle warnings
       if (warningCount < 4) {
-        // Send warning message
+        // English-styled warning message
         await conn.sendMessage(from, {
-          text: `𝗡𝗢𝗧 𝗦𝗘𝗡𝗗 𝗔 𝗟𝗜𝗡𝗞 𝗛𝗘𝗥𝗘
-‎╭╼════⪨𝗪𝗔𝗥𝗡𝗜𝗡𝗚⪩════╾╮
-┃♧𝗨𝗦𝗘𝗥 ➽ @${sender.split('@')[0]}
-┃♧𝗖𝗢𝗨𝗡𝗧 ➽ # *${warningCount}*
-┃♧𝗥𝗘𝗔𝗦𝗢𝗡 ➽ 𝗟𝗜𝗡𝗞 𝗦𝗘𝗡𝗗𝗜𝗡𝗚
-┃♧𝗪𝗔𝗥𝗡 𝗟𝗜𝗠𝗜𝗧 ➽ *2*
-╰╼═════════════════╾╯
-> 𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 RAHEEM-CM`,
+          text: `⚠️ *DO NOT SEND LINKS IN THIS GROUP!*
+╭─────────────⦿⦿⦿─────────────╮
+┃ 👤 *USER*: @${sender.split('@')[0]}
+┃ 🔢 *WARNING COUNT*: *${warningCount}*
+┃ 🚫 *REASON*: SENDING LINKS
+┃ ⏳ *WARNING LIMIT*: *3*
+╰─────────────⦿⦿⦿─────────────╯
+*If you reach 3 warnings you will be removed from the group!*
+_Powered by RAHEEM-CM_`,
           mentions: [sender]
         });
       } else {
         // Remove user if they exceed warning limit
         await conn.sendMessage(from, {
-          text: `@${sender.split('@')[0]} *HAS BEEN REMOVED - WARN LIMIT EXCEEDED!*`,
+          text: `@${sender.split('@')[0]} *HAS BEEN REMOVED - WARNING LIMIT EXCEEDED!*`,
           mentions: [sender]
         });
         await conn.groupParticipantsUpdate(from, [sender], "remove");
