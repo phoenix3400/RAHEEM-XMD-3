@@ -28,9 +28,9 @@ Our system detects:
 • Repeating commands
 • Long flood texts
 
-Let’s keep *RAHEEM-XMD-3* safe and clean for all 🛡️✨
+Let’s keep *RAHEEM-XMD-3* safe and clean for all 📵✨
 
-— *RAHEEM MODERATION TEAM* ⚙️
+— *RAHEEM MODERATION TEAM* 😿
 `.trim();
 
         const fakeContact = {
@@ -56,7 +56,7 @@ Let’s keep *RAHEEM-XMD-3* safe and clean for all 🛡️✨
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterName: 'RAHEEM-BOTS 🤟✌',
-                    newsletterJid: '120363288304618280@newsletter',
+                    newsletterJid: '120363399470975987@newsletter',
                     serverMessageId: 121
                 }
             }
