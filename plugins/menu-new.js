@@ -1293,9 +1293,16 @@ _✨ Powered by RAHEEM-CM🎗${config.OWNER_NAME} ✨_`,
 │ gjid                                                           │
 │ jid                                                            │
 ╰────────────────────────────────────────────────────────────────╯       
-// --------- STYLE 6 ---------
- 
-      /  RAHEE-XMD-3  /
+// --------- STYLE 6 ---------  
+╭══⪨ RAHEEM-XMD-3🇹🇿 ⪩══╮
+┃😎 𝗨𝗦𝗘𝗥 : @${m.sender.split("@")[0]}
+┃⌚ 𝗧𝗜𝗠𝗘 : ${uptime()}
+┃👔 𝗠𝗢𝗗𝗘 : *${config.MODE}*
+┃🐯 𝗣𝗥𝗘𝗙𝗜𝗫 : [${config.PREFIX}]
+┃✌️ 𝗣𝗟𝗨𝗚𝗜𝗡 :  ${totalCommands}
+┃💪 𝗗𝗘𝗩 : RAHEEM-CM 
+┃👌 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 : 𝟮.𝟬.𝟬
+╰══════════════════╯
 ┣━━⪨ *REACTIONS COMMANDS* ⪩━━┈⊷
 ┃ bully
 ┃ cuddle
