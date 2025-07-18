@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 cmd({
-    pattern: "cmd",
+    pattern: "meonly",
     alias: ["source", "js"],
     desc: "Fetch the full source code of a command",
     category: "owner",
