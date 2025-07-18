@@ -1,7 +1,7 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
 
-const MUSIC_URL = "https://files.catbox.moe/n281ow.mp3"; // Badilisha mp3 url kama unataka
+const MUSIC_URL = "https://files.catbox.moe/o919rq.mp3"; // Badilisha mp3 url kama unataka
 
 cmd({
     pattern: "ping",
