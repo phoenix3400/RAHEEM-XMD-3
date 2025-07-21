@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://github.com/Raheem-cm">
-    <img title="first follow Raheem-cm" src="https://img.shields.io/badge/first-follow%20Raheem-cm-blue?style=for-the-badge&logo=RAHEEM&logoColor=gold" />
+   <img title="first follow Raheem-cm" src="https://img.shields.io/badge/first-follow%20Raheem-cm-blue?style=for-the-badge&logo=RAHEEM&logoColor=gold" />
  </a>
   <a href="https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r">
     <img title="Join WhatsApp Channel" src="https://img.shields.io/badge/Join-WhatsApp%20Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
