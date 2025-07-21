@@ -1,43 +1,81 @@
 const { cmd } = require('../command');
 const config = require('../config');
 
+const THANKS_IMG = 'https://files.catbox.moe/a97zm1.jpg';
+const MUSIC_URL = 'https://files.catbox.moe/t7ul1u.mp3'; // Optional audio
+
 cmd({
     pattern: "abdulrahim",
     alias: ["thanksto"],
-    desc: "thanks to dev for helping",
+    desc: "Thanks to the dev for helping",
     category: "main",
     react: "🇹🇿",
     filename: __filename
 },
 async (conn, mek, m, { from }) => {
     try {
-        const message =`╭━━━⪨RAHEEM-XMD-3⪩━━━╮
-┃╭╼━━━━━━━━━━━┈⊷
-┃┃👨‍💻 𝗗𝗘𝗩:RAHEEM-CM
-┃┃🪀 𝗡𝗨𝗠𝗕𝗘𝗥:+255763111390 
-┃┃🛠️ 𝗕𝗡𝗔𝗠𝗘:RAHEEM-XMD-3 
-┃┃🙋‍♂️ ASALAMU ALYKUM: @${m.sender.split("@")[0]}
-┃╰╼━━━━━━━━━━━┈⊷
-╰╼══════════════╾╯
-> *𝑃𝑂𝑊𝐸𝑅𝐸𝐷 𝐵𝑌 RAHEEM*`;
+        const mention = `@${m.sender.split("@")[0]}`;
 
+        const captions = [
+`╭─〔 *RAHEEM-XMD-3 CREDITS* 〕─╮
+┃ 👨‍💻 Dev: RAHEEM-CM
+┃ 📱 Number: +255763111390
+┃ 🤖 Bot: RAHEEM-XMD-3
+┃ 🙋‍♂️ Salamu kwako: ${mention}
+╰────────────────────────╯
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ RAHEEM CM`,
+
+`🪀 *Special Thanks To Dev*
+👨‍💻 Dev: RAHEEM-CM
+📞 +255763111390
+🔧 Bot Name: RAHEEM-XMD-3
+🙋‍♂️ Mentioned: ${mention}
+━━━━━━━━━━━━━━
+> ʙʏ ʀᴀʜᴇᴇᴍ ᴄᴍ`,
+
+`╔═══✪ Dev Acknowledgement ✪═══╗
+║ 👨‍💻 RAHEEM-CM
+║ ☎️ +255763111390
+║ 🤖 Bot: RAHEEM-XMD-3
+║ 🙋 Mention: ${mention}
+╚═════════════════════════╝
+Powered by RAHEEM-CM 🛠️`
+        ];
+
+        const emojis = ['🪀', '💎', '🧑‍💻', '🔥', '📌', '🤖', '🧠'];
+        const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+        const caption = captions[Math.floor(Math.random() * captions.length)];
+
+        // React first
         await conn.sendMessage(from, {
-            image: { url: 'https://files.catbox.moe/a97zm1.jpg' },
-            caption: message,
+            react: { text: emoji, key: mek.key }
+        });
+
+        // Send the message
+        await conn.sendMessage(from, {
+            image: { url: THANKS_IMG },
+            caption,
             contextInfo: {
                 mentionedJid: [m.sender],
-                forwardingScore: 1000,
+                forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363399470975987@newsletter', // remplace avec ton vrai newsletterJid si besoin
-                    newsletterName: 'RAHEEM-CM',
+                    newsletterJid: '120363399470975987@newsletter',
+                    newsletterName: 'RAHEEM-XMD-3🪀',
                     serverMessageId: 143
                 }
             }
         }, { quoted: mek });
 
+        // Optional background audio
+        await conn.sendMessage(from, {
+            audio: { url: MUSIC_URL },
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: mek });
+
     } catch (err) {
         console.error("ThanksTo Error:", err);
-        await conn.sendMessage(from, { text: `Error: ${err.message}` }, { quoted: mek });
+        await conn.sendMessage(from, { text: `❌ Error: ${err.message}` }, { quoted: mek });
     }
 });
