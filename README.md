@@ -82,3 +82,67 @@ DEPLOY SIMPLY RAHEEM-XMD-3
 
 [![TypingSVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=50&pause=1000&color=FF0000&center=true&vCenter=true&width=900&height=130&lines=『+⚡owner+number-+255763111390⚡+』)](https://git.io/typing-svg)
 
+ 🔄 ɢɪᴛʜᴜʙ ᴀᴄᴛɪᴏɴs
+ᴅᴇᴘʟᴏʏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴜsɪɴɢ `.yml` ᴡᴏʀᴋғʟᴏᴡ ɪɴsɪᴅᴇ ɢɪᴛʜᴜʙ ᴀᴄᴛɪᴏɴs.
+
+
+**ɢɪᴛʜᴜʙ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ** 
+
+```
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 */6 * * *'  
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install FFmpeg
+      run: sudo apt-get install -y ffmpeg
+
+    - name: Start application with timeout
+      run: |
+        timeout 10800s npm start  # Limite l'exécution à 72h 00m 00s
+
+    - name: Save state (Optional)
+      run: |
+        ./save_state.sh
+```
+
+---
+
+🧰 ᴍᴀɴᴜᴀʟ ɪɴsᴛᴀʟʟᴀᴛɪᴏɴ
+
+```ʙᴀsʜ
+git https://github.comRRaheem-cm/RAHEEM-XMD-3
+cd RAHEEM-XMD-3
+npm install
+node .
+```
+
+---
