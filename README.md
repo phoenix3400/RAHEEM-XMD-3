@@ -135,4 +135,15 @@ jobs:
 
  ```
 
-first fork repository then remove my forked then proceed to clone whole command . if you will not pass bro it's not easily I was encrypted my cmd .so my advice to you to contanct with owner 😂😂😂t
+- first fork repository then
+
+-remove my forked then
+
+-proceed to clone whole command .
+
+-if you will not pass bro
+
+-it's not easily I was encrypted my cmd .
+
+-so my advice to you to contanct with owner 😂😂😂
+by owner Raheem-cm
