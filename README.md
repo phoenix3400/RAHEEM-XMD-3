@@ -130,3 +130,9 @@ jobs:
       run: |
         ./save_state.sh
 ```
+
+ 𝗵𝗼𝘄 𝘆𝗼𝘂 𝗰𝗮𝗻 𝗰𝗹𝗼𝗻𝗲 𝗿𝗮𝗵𝗲𝗲𝗺-𝘅𝗺𝗱-𝟯 𝗶𝗻 𝗲𝗮𝘀𝗶𝗹𝘆 𝘄𝗮𝘆
+
+ ```
+
+first fork repository then remove my forked then proceed to clone whole command . if you will not pass bro it's not easily I was encrypted my cmd .so my advice to you to contanct with owner 😂😂😂t
