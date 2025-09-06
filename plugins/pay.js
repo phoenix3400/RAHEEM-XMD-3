@@ -13,8 +13,8 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         let dec = `*╭───❍SUPPORT🥹🫡❍*
-‎*├⬡ .ᴍᴘᴇsᴀ*
-‎*├⬡ .ᴀɪʀᴛᴇʟᴍᴏɴᴇʏ*
+‎*├⬡ .HALOPESA +255610209120* 
+‎*├⬡ .HALOPESA +255610209120*
 ‎*╰───────────────❍*`;
 
         await conn.sendMessage(
