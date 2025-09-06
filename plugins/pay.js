@@ -27,7 +27,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterJid: 'https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r',
                         newsletterName: "RAHEEM-XMD-3 PAYMENT",
                         serverMessageId: 143
                     }
